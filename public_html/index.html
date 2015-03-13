@@ -6,11 +6,130 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Getra prestige</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet">
+        <style>
+
+            div[class^="col-"].NoPad{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .containerM{
+                border-top: #23527c solid 1px; 
+                height: 500px;
+            }
+
+            .parchemin{
+                box-shadow: -5px 0px 100px rgba(0,0,0,0.5);
+                background-color: whitesmoke;
+            }
+
+            #mymap{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 style="margin-bottom: 15px;">Google Map plug-in</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 NoPad containerM">
+                    <div id="mymap" class="g3map">
+                        <div class="fond"></div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+            <script type="text/javascript" src="js/gmap3.js"></script>
+            <script>
+                $(function () {
+                    $('#mymap').gmap3({
+                        map: {
+                            options: {
+                                center: [49.609314, 6.118184],
+                                zoom: 16,
+                                maxZoom: 20,
+                                minZoom: 14,
+                                mapMaker: false,
+                                mapTypeControl: false,
+                                panControl: false,
+                                zoomControl: false,
+                                scaleControl: false,
+                                streetViewControl: false,
+                                rotateControl: false,
+                                rotateControlOptions: false,
+                                overviewMapControl: false,
+                                OverviewMapControlOptions: false,
+                                styles: [
+                                    {featureType: "poi",
+                                        stylers: [
+                                            {visibility: "off"}
+                                        ]
+                                    }, {
+                                        stylers: [
+                                            {hue: "#d89000"},
+                                            {saturation: -20}
+                                        ]
+                                    }, {
+                                        featureType: "road",
+                                        elementType: "geometry",
+                                        stylers: [
+                                            {lightness: 100},
+                                            {visibility: "on"}
+                                        ]
+                                    }, {
+                                        featureType: "road",
+                                        elementType: "labels",
+                                        stylers: [
+                                            {visibility: "on"}
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        marker: {
+                            values: [
+                                {address: "16 Avenue du Dix Septembre, 2550 Luxembourg", data: "14, Avenue du X Septembre"}
+                            ],
+                            options: {
+                                draggable: false
+                            },
+                            events: {
+                                mouseover: function (marker, event, context) {
+                                    var map = $(this).gmap3("get"),
+                                            infowindow = $(this).gmap3({get: {name: "infowindow"}});
+                                    if (infowindow) {
+                                        infowindow.open(map, marker);
+                                        infowindow.setContent(context.data);
+                                    } else {
+                                        $(this).gmap3({
+                                            infowindow: {
+                                                anchor: marker,
+                                                options: {content: context.data}
+                                            }
+                                        });
+                                    }
+                                },
+                                mouseout: function () {
+                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
+                                    if (infowindow) {
+                                        infowindow.close();
+                                    }
+                                }
+                            }
+                        }
+                    });
+                });
+        </script>
     </body>
 </html>
