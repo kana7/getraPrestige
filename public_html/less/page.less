@@ -10,40 +10,52 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+
 header{
 
 }
 Section{
-    
+
 }
 footer{
     div.row{
-        img{
+        #imgFoot{
             @media @desktop{
                 height: 254px;
                 width: 1920px;
             }
+            .drop-shadow(0px, 2px, 15px, 0, 0.5);
             height:auto;
+            border-bottom: @deep-black solid 1px;
+            border-top: @deep-black solid 1px;
         }
-        #footmoy{
-            #excl{
-                width: 234px;
-                height: auto;
-            }
-            #logoFoot{
-                width: 286px;
-                height: auto;
-            }
-        }
-        #bas{
-            height: 50px;
-        }
-
     }
+}
+
+#footBas{
+    .drop-shadow(0px, -2px, 15px, 0, 0.5);
+}
+
+#logoFoot{
+    margin-bottom: 10px;
+    margin-top: 17px;
+    width: 286px;
+    height: auto;
+    padding-right: 50px;
+}
+
+#excl{
+    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 234px;
+    height: auto;
 }
 
 #text-footer{
     .light(@footer-size, @color-footer);
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .NoPad{
@@ -109,7 +121,7 @@ p{
 }
 
 /*
-Couleur
+Couleur et forme
 
 */
 
@@ -119,4 +131,24 @@ Couleur
 
 .bg-black{
     .gradient(@light-black, @deep-black);
+}
+
+.white{
+    color: @white;
+}
+
+div.traitV{
+    position: relative;
+    top: 25px;
+    display: inline-block;
+    border-right: rgba(255,255,255,0.4) solid 2px;
+    height: 65px;
+}
+div.traitH{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: rgba(255,255,255,1) solid 2px;
+    width:65px;
+    height: 2px;
 }
