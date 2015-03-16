@@ -14,20 +14,24 @@ Partie de la page
 header{
 
 }
-Section{
-
+#contact{
+    div.row{
+        div.traitH+p{
+            margin-top: 35px;
+            margin-bottom: 45px;
+        }
+    }   
 }
 footer{
     div.row{
         #imgFoot{
             @media @desktop{
                 height: 254px;
-                width: 1920px;
             }
             .drop-shadow(0px, 2px, 15px, 0, 0.5);
             height:auto;
             border-bottom: @deep-black solid 1px;
-            border-top: @deep-black solid 1px;
+            border-top: @light-black solid 1px;
         }
     }
 }
@@ -101,6 +105,7 @@ h1{
 h2{
     .regular(@titreCategorie-size, @color-caract-black);
     text-transform: capitalize;
+    margin-top: 35px;
 }
 p{
     .light(@paragraph-size, @color-caract-black);
@@ -148,7 +153,8 @@ div.traitH{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     border-bottom: rgba(255,255,255,1) solid 2px;
-    width:65px;
+    width:70px;
     height: 2px;
 }
