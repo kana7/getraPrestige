@@ -14,29 +14,24 @@ Partie de la page
 header{
 
 }
+
+
+/*
+Partie contact us
+
+*/
 #contact{
+
+    /*
+    Partie Titre
+    
+    */
     div.row{
         div.traitH+p{
             margin-top: 35px;
             margin-bottom: 45px;
         }
-        form{
 
-            div.row:not(#firstLigne){
-                margin-top: 30px;
-            }
-            input{
-                float: none;
-                width: 257px;
-                height: 54px;
-            }
-            textarea{
-                float: none;
-                resize: none;
-                width: 541px;
-                height: 244px;
-            }
-        }
         #coordonnée{
             p{
                 .regular(@text-size,@white);
@@ -50,8 +45,58 @@ header{
                 margin-top: 15px;
             }
         }        
-    }   
+    }  
+
+
+    /*
+    Partie formulaire
+    
+    */
+    #formulaire{
+        padding-bottom: 50px;
+        padding-top: 45px;
+
+        @media @desktop{
+            aside{
+                padding-left: 40px;
+            }
+            input{
+                width: 257px;
+            }
+            textarea{
+                width: 541px;
+            }
+        }
+
+        form{
+
+            div.row:not(#firstLigne){
+                margin-top: 30px;
+            }
+            input{
+                float: none;
+                height: 54px;
+            }
+
+            input[type=submit]{
+                position: relative;
+                right: 284px;
+            }
+
+            textarea{
+                float: none;
+                resize: none;
+                height: 244px;
+            }
+        }
+    }
 }
+
+
+/*
+Bannière de pied de page
+
+*/
 footer{
     div.row{
         #imgFoot{

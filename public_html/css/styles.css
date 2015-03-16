@@ -48,23 +48,23 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+/*
+Partie contact us
+
+*/
+#contact {
+  /*
+    Partie Titre
+    
+    */
+  /*
+    Partie formulaire
+    
+    */
+}
 #contact div.row div.traitH + p {
   margin-top: 35px;
   margin-bottom: 45px;
-}
-#contact div.row form div.row:not(#firstLigne) {
-  margin-top: 30px;
-}
-#contact div.row form input {
-  float: none;
-  width: 257px;
-  height: 54px;
-}
-#contact div.row form textarea {
-  float: none;
-  resize: none;
-  width: 541px;
-  height: 244px;
 }
 #contact div.row #coordonnée p {
   font-family: "Open Sans";
@@ -79,6 +79,41 @@ Partie de la page
 #contact div.row #coordonnée img {
   margin-top: 15px;
 }
+#contact #formulaire {
+  padding-bottom: 50px;
+  padding-top: 45px;
+}
+@media only screen and (min-width: 1200px) {
+  #contact #formulaire aside {
+    padding-left: 40px;
+  }
+  #contact #formulaire input {
+    width: 257px;
+  }
+  #contact #formulaire textarea {
+    width: 541px;
+  }
+}
+#contact #formulaire form div.row:not(#firstLigne) {
+  margin-top: 30px;
+}
+#contact #formulaire form input {
+  float: none;
+  height: 54px;
+}
+#contact #formulaire form input[type=submit] {
+  position: relative;
+  right: 284px;
+}
+#contact #formulaire form textarea {
+  float: none;
+  resize: none;
+  height: 244px;
+}
+/*
+Bannière de pied de page
+
+*/
 footer div.row #imgFoot {
   -webkit-box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
