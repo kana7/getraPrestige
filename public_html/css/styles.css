@@ -78,12 +78,14 @@ Partie contact us
 }
 #contact div.row #coordonnée img {
   margin-top: 15px;
+  width: 242px;
+  height: auto;
 }
 #contact #formulaire {
   padding-bottom: 50px;
   padding-top: 45px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   #contact #formulaire aside {
     padding-left: 40px;
   }
@@ -94,6 +96,15 @@ Partie contact us
     width: 541px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact #formulaire article {
+    text-align: center;
+  }
+  #contact #formulaire form input[type=submit] {
+    position: relative;
+    right: 500px;
+  }
+}
 #contact #formulaire form div.row:not(#firstLigne) {
   margin-top: 30px;
 }
@@ -101,9 +112,11 @@ Partie contact us
   float: none;
   height: 54px;
 }
-#contact #formulaire form input[type=submit] {
-  position: relative;
-  right: 284px;
+@media only screen and (min-width: 992px) {
+  #contact #formulaire form input[type=submit] {
+    position: relative;
+    right: 284px;
+  }
 }
 #contact #formulaire form textarea {
   float: none;
@@ -139,7 +152,7 @@ footer #imgFoot {
   border-bottom: #262626 solid 1px;
   border-top: #403f3f solid 1px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   footer #imgFoot #imgFoot {
     height: 254px;
   }
@@ -182,14 +195,9 @@ Google Map
 .containerM {
   border-top: #23527c solid 1px;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .containerM {
     height: 427px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .containerM {
-    height: 267px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
