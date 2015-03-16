@@ -52,6 +52,20 @@ Partie de la page
   margin-top: 35px;
   margin-bottom: 45px;
 }
+#contact div.row form div.row:not(#firstLigne) {
+  margin-top: 30px;
+}
+#contact div.row form input {
+  float: none;
+  width: 257px;
+  height: 54px;
+}
+#contact div.row form textarea {
+  float: none;
+  resize: none;
+  width: 541px;
+  height: 244px;
+}
 #contact div.row #coordonnée p {
   font-family: "Open Sans";
   font-weight: 400;
@@ -60,7 +74,7 @@ Partie de la page
   text-shadow: 0px 2px #000000;
 }
 #contact div.row #coordonnée #data {
-  line-height: 200%;
+  line-height: 185%;
 }
 #contact div.row #coordonnée img {
   margin-top: 15px;
