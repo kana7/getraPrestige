@@ -100,10 +100,10 @@ Bannière de pied de page
 footer{
     @media @phone{
         #logo{
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
-            
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
         div.row{
             div[class^="col-"]{
                 text-align: center;
@@ -117,14 +117,16 @@ footer{
                 margin-top: 30px;
             }
         }
-        #imgFoot{
-            @media @desktop{
+    }
+    #imgFoot{
+        .drop-shadow(0px, 2px, 15px, 0, 0.5);
+        height:auto;
+        border-bottom: @deep-black solid 1px;
+        border-top: @light-black solid 1px;
+        @media @desktop{
+            #imgFoot{
                 height: 254px;
             }
-            .drop-shadow(0px, 2px, 15px, 0, 0.5);
-            height:auto;
-            border-bottom: @deep-black solid 1px;
-            border-top: @light-black solid 1px;
         }
     }
 }
