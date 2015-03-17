@@ -165,9 +165,6 @@ Partie contact us
 
         form{
 
-            div.row:not(#firstLigne){
-                margin-top: 30px;
-            }
             input{
                 float: none;
                 height: 54px;
@@ -390,9 +387,22 @@ input[type=submit]{
     .bold(16px, @orange);
     .drop-shadow(0px, 4px, 15px, 0, 0.5);
 }
+input[type=submit]:hover{
+    .gradient(@light-black, @light-black);
+}
+input[type=submit]:active{
+    .drop-shadow(0px, 0px, 0px, 0, 0.5);
+    position: relative;
+    top: 5px;
+}
 
 input,textArea{
     .inner-shadow(0px, 2px, 15px, 0, 0.5);
+}
+
+:focus{
+    outline: none;
+    border: 1px @white solid;
 }
 
 
@@ -416,4 +426,8 @@ Alignement
         margin-top: -15px;
         height: 325px;
     }
+}
+
+input.input-space,textarea.input-space{
+    margin-top: 30px;                
 }
