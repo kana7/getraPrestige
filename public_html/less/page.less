@@ -305,6 +305,11 @@ Couleur et forme
     color: @white;
 }
 
+/*
+Traits
+
+*/
+
 div.traitV{
     position: relative;
     top: 25px;
@@ -320,6 +325,34 @@ div.traitH{
     width:70px;
     height: 2px;
 }
+
+/*
+Boutons et formulaires
+
+*/
+
+input,textArea,input[type=submit]{
+    .gradient(@light-black, @deep-black);
+    .border-radius(1px);
+    border: 1px @grey solid;
+    .regular(@text-size, @white);
+    text-shadow: 0px 2px #000000;
+}
+
+input[type=submit]{
+    .bold(16px, @orange);
+    .drop-shadow(0px, 4px, 15px, 0, 0.5);
+}
+
+input,textArea{
+    .inner-shadow(0px, 2px, 15px, 0, 0.5);
+}
+
+
+/*
+Alignement
+
+*/
 
 .ecartement{
     margin-bottom: 20px;
