@@ -17,6 +17,33 @@ header{
 
 
 /*
+Partie what we do
+
+*/
+#do{
+    padding-bottom: 50px;
+    div.traitHBlack+p{
+        margin-top: 35px;
+        margin-bottom: 45px;
+    }
+    div[class^="col-"] p{
+        .regular(@paragraph-size, @orange);
+        margin-top: 20px;
+        position: relative;
+        left: 50px;
+    }
+    div[class=circular]:hover{
+        .grayFilter(0%);
+    }
+    
+    img{
+        width: 242px;
+        height: auto;
+    }
+}
+
+
+/*
 Partie contact us
 
 */
@@ -305,6 +332,10 @@ Couleur et forme
     color: @white;
 }
 
+.circular{
+    .grayFilter(100%);
+    .circular;
+}
 /*
 Traits
 
@@ -321,7 +352,15 @@ div.traitH{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: rgba(255,255,255,1) solid 2px;
+    border-bottom: @white solid 2px;
+    width:70px;
+    height: 2px;
+}
+div.traitHBlack{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: @color-caract-black solid 2px;
     width:70px;
     height: 2px;
 }

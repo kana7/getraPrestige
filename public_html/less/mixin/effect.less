@@ -70,6 +70,15 @@ Auteur: Quentin Fonck
     opacity: 		@opacity;
 }
 
+.grayFilter(@pourcentage) {
+-webkit-filter: grayscale(@pourcentage) ;
+-moz-filter: grayscale(@pourcentage);
+-ms-filter: grayscale(@pourcentage);
+-webkit-filter: grayscale(@pourcentage);
+filter: gray; 
+filter: grayscale(@pourcentage);
+}
+
 .background-clip(@argument: padding-box) {
   -moz-background-clip: @argument;
   -webkit-background-clip: @argument;

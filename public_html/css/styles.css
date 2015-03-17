@@ -24,6 +24,28 @@ Auteur: Quentin Fonck
     Created on : 14 mars 2015, 12:00:54
 */
 /*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 mars 2015, 11:22:52
+    Author     : lol2
+*/
+.circular {
+  width: 240px;
+  height: 240px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
+/*
 Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
@@ -48,6 +70,37 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+/*
+Partie what we do
+
+*/
+#do {
+  padding-bottom: 50px;
+}
+#do div.traitHBlack + p {
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+#do div[class^="col-"] p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ef7920;
+  margin-top: 20px;
+  position: relative;
+  left: 50px;
+}
+#do div[class=circular]:hover {
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  filter: gray;
+  filter: grayscale(0%);
+}
+#do img {
+  width: 242px;
+  height: auto;
+}
 /*
 Partie contact us
 
@@ -321,6 +374,24 @@ Couleur et forme
 .white {
   color: #ffffff;
 }
+.circular {
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%);
+  width: 240px;
+  height: 240px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
+}
 /*
 Traits
 
@@ -337,6 +408,14 @@ div.traitH {
   margin-left: auto;
   margin-right: auto;
   border-bottom: #ffffff solid 2px;
+  width: 70px;
+  height: 2px;
+}
+div.traitHBlack {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: #363636 solid 2px;
   width: 70px;
   height: 2px;
 }
