@@ -34,7 +34,7 @@ Partie contact us
 
         #coordonnée{
             p{
-                .regular(@text-size,@white);
+                .regular(@text-size, @white);
                 text-shadow: 0px 2px #000000;
             }
             #data{
@@ -71,14 +71,35 @@ Partie contact us
         }
 
         @media @tablet{
+
+            padding-bottom: 40px;
+            padding-top: 35px;
+
             article{
                 text-align: center;
             }
-            form{
-                input[type=submit]{
-                    position: relative;
-                    right: 500px;
+
+            
+            aside{
+                text-align: center;
+                margin-top: 40px;
+                margin-left:65px;
+
+                div.row{
+                    p{
+                        text-align: left;
+                    }
+
+                    img{
+                        margin-top: 0px;
+                        position: relative;
+                        right: 100px;
+                    }
+                    div[class^="col-"]:first-child{
+                        margin-top: 35px;
+                    }
                 }
+
             }
         }
 
@@ -91,16 +112,24 @@ Partie contact us
                 float: none;
                 height: 54px;
             }
+            textarea{
+                float: none;
+                resize: none;
+                height: 244px;
+            }
             @media @desktop{
                 input[type=submit]{
                     position: relative;
                     right: 284px;
                 }
             }
-            textarea{
-                float: none;
-                resize: none;
-                height: 244px;
+            @media @tablet{
+                input[type=submit]{
+                    position: relative;
+                    right: 142px;
+                }
+
+
             }
         }
     }

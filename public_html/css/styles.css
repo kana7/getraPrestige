@@ -97,12 +97,28 @@ Partie contact us
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact #formulaire {
+    padding-bottom: 40px;
+    padding-top: 35px;
+  }
   #contact #formulaire article {
     text-align: center;
   }
-  #contact #formulaire form input[type=submit] {
+  #contact #formulaire aside {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 65px;
+  }
+  #contact #formulaire aside div.row p {
+    text-align: left;
+  }
+  #contact #formulaire aside div.row img {
+    margin-top: 0px;
     position: relative;
-    right: 500px;
+    right: 100px;
+  }
+  #contact #formulaire aside div.row div[class^="col-"]:first-child {
+    margin-top: 35px;
   }
 }
 #contact #formulaire form div.row:not(#firstLigne) {
@@ -112,16 +128,22 @@ Partie contact us
   float: none;
   height: 54px;
 }
+#contact #formulaire form textarea {
+  float: none;
+  resize: none;
+  height: 244px;
+}
 @media only screen and (min-width: 992px) {
   #contact #formulaire form input[type=submit] {
     position: relative;
     right: 284px;
   }
 }
-#contact #formulaire form textarea {
-  float: none;
-  resize: none;
-  height: 244px;
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact #formulaire form input[type=submit] {
+    position: relative;
+    right: 142px;
+  }
 }
 /*
 Bannière de pied de page
