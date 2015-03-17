@@ -1780,7 +1780,9 @@ pre code {
   }
   .col-sm-6 {
     width: 50%;
-  }
+  
+    /* width: 631px; */
+}
   .col-sm-5 {
     width: 41.66666667%;
   }

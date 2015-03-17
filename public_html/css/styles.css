@@ -115,6 +115,17 @@ Partie contact us
   width: 242px;
   height: auto;
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #contact div.row #coordonnée div[class^="col-"] {
+    width: 300px;
+    display: inline-block;
+  }
+  #contact div.row #coordonnée div.row #blocInfos {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 #contact #formulaire {
   padding-bottom: 50px;
   padding-top: 45px;
@@ -139,17 +150,13 @@ Partie contact us
     text-align: center;
   }
   #contact #formulaire aside {
-    text-align: center;
     margin-top: 40px;
-    margin-left: 65px;
   }
   #contact #formulaire aside div.row p {
     text-align: left;
   }
   #contact #formulaire aside div.row img {
     margin-top: 0px;
-    position: relative;
-    right: 100px;
   }
   #contact #formulaire aside div.row div[class^="col-"]:first-child {
     margin-top: 35px;

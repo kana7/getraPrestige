@@ -26,12 +26,12 @@ Partie what we do
         margin-top: 35px;
         margin-bottom: 45px;
     }
-    
+
     div[class^="col-"] p{
         .regular(@paragraph-size, @orange);
         margin-top: 20px;
     }
-    
+
     div[class^="col-"]{
         div.circular:hover{
             .grayFilter(0%); 
@@ -70,6 +70,21 @@ Partie contact us
                 width: 242px;
                 height: auto;
             }
+
+            @media @tablet{
+                div[class^="col-"]{
+                    width: 300px;
+                    display: inline-block;
+                }
+                div.row{
+                    #blocInfos{
+                        width: 600px;
+                        margin:0 auto;
+                        text-align: center;
+                    } 
+                }
+            }
+
         }        
     }  
 
@@ -103,11 +118,9 @@ Partie contact us
                 text-align: center;
             }
 
-
             aside{
-                text-align: center;
+
                 margin-top: 40px;
-                margin-left:65px;
 
                 div.row{
                     p{
@@ -116,8 +129,6 @@ Partie contact us
 
                     img{
                         margin-top: 0px;
-                        position: relative;
-                        right: 100px;
                     }
                     div[class^="col-"]:first-child{
                         margin-top: 35px;
@@ -403,6 +414,6 @@ Alignement
     margin-top: 15px;
     @media @tablet{
         margin-top: -15px;
-         height: 325px;
+        height: 325px;
     }
 }
