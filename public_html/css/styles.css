@@ -57,6 +57,21 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+#team {
+  padding-bottom: 30px;
+  margin-left: 0px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+}
+#team div.traitHBlack + p {
+  margin-top: 35px;
+}
 /*
 Partie what we do
 
