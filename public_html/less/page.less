@@ -26,19 +26,16 @@ Partie what we do
         margin-top: 35px;
         margin-bottom: 45px;
     }
+    
     div[class^="col-"] p{
         .regular(@paragraph-size, @orange);
         margin-top: 20px;
-        position: relative;
-        left: 50px;
-    }
-    div[class=circular]:hover{
-        .grayFilter(0%);
     }
     
-    img{
-        width: 242px;
-        height: auto;
+    div[class^="col-"]{
+        div.circular:hover{
+            .grayFilter(0%); 
+        }
     }
 }
 
@@ -334,7 +331,7 @@ Couleur et forme
 
 .circular{
     .grayFilter(100%);
-    .circular;
+    .circular(240px);
 }
 /*
 Traits
@@ -395,4 +392,17 @@ Alignement
 
 .ecartement{
     margin-bottom: 20px;
+}
+
+.col-center{
+    margin : 0 auto;
+    float:none;
+}
+
+.hight{
+    margin-top: 15px;
+    @media @tablet{
+        margin-top: -15px;
+         height: 325px;
+    }
 }
