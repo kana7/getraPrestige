@@ -79,7 +79,7 @@ Partie contact us
                 text-align: center;
             }
 
-            
+
             aside{
                 text-align: center;
                 margin-top: 40px;
@@ -100,6 +100,31 @@ Partie contact us
                     }
                 }
 
+            }
+        }
+
+        @media @phone{
+
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            article{
+                text-align: center;
+                padding-left: 70px;
+                padding-right: 70px;
+            }
+            input{
+                float:none;
+            }
+            textarea{
+                float:none;
+            }
+
+            aside{
+                margin-top: 50px;
+                div[class^="col-"]:first-child{
+                    text-align: center;
+                }
             }
         }
 
@@ -221,7 +246,7 @@ Google Map
         height: 221px; 
     }
     @media @phone{
-        height: 171px; 
+        height: 221px; 
     }
 }
 
@@ -294,4 +319,8 @@ div.traitH{
     border-bottom: rgba(255,255,255,1) solid 2px;
     width:70px;
     height: 2px;
+}
+
+.ecartement{
+    margin-bottom: 20px;
 }

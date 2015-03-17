@@ -121,6 +121,29 @@ Partie contact us
     margin-top: 35px;
   }
 }
+@media only screen and (max-width: 767px) {
+  #contact #formulaire {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #contact #formulaire article {
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  #contact #formulaire input {
+    float: none;
+  }
+  #contact #formulaire textarea {
+    float: none;
+  }
+  #contact #formulaire aside {
+    margin-top: 50px;
+  }
+  #contact #formulaire aside div[class^="col-"]:first-child {
+    text-align: center;
+  }
+}
 #contact #formulaire form div.row:not(#firstLigne) {
   margin-top: 30px;
 }
@@ -229,7 +252,7 @@ Google Map
 }
 @media only screen and (max-width: 767px) {
   .containerM {
-    height: 171px;
+    height: 221px;
   }
 }
 #mymap {
@@ -312,5 +335,8 @@ div.traitH {
   border-bottom: #ffffff solid 2px;
   width: 70px;
   height: 2px;
+}
+.ecartement {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
