@@ -61,6 +61,12 @@ Partie de la page
   padding-right: 0px;
   padding-left: 0px;
 }
+#home {
+  padding-bottom: 30px;
+}
+#home div.traitHBlack + p {
+  margin-top: 35px;
+}
 #team {
   padding-bottom: 30px;
   margin-left: 0px;
@@ -145,6 +151,11 @@ Partie contact us
   padding-bottom: 50px;
   padding-top: 45px;
 }
+@media only screen and (min-width: 992px) {
+  #contact #formulaire aside {
+    margin-top: 30px;
+  }
+}
 @media only screen and (min-width: 768px) {
   #contact #formulaire aside {
     padding-left: 40px;
@@ -208,6 +219,7 @@ Partie contact us
   float: none;
   resize: none;
   height: 244px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 992px) {
   #contact #formulaire form input[type=submit] {
