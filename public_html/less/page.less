@@ -57,6 +57,29 @@ header{
         margin-bottom: 35px;
     }
 
+    div[class^="col-"] p{
+        .regular(@paragraph-size, @orange);
+        margin-top: 20px;
+    }
+
+    div.container{
+        margin-top: 50px;
+    }
+    
+    div.traitLight+p{
+        margin-top: 5px;
+        .regular(16px,@color-caract-black);
+    }
+
+
+    @media @tablet{
+
+        div[class^="col-"]:last-child{
+            position: relative;
+            left: 188px;
+        }
+    }
+
     div.traitHBlack+p{
         @media @desktop{
             margin: 0 auto;
@@ -93,6 +116,9 @@ Partie what we do
     }
 
     div[class^="col-"]{
+        div.circular{
+            .grayFilter;
+        }
         div.circular:hover{
             .disableFilter;
             cursor: pointer;
@@ -406,7 +432,6 @@ Couleur et forme
 }
 
 .circular{
-    .grayFilter;
     .circular(240px);
 }
 /*
@@ -436,6 +461,17 @@ div.traitHBlack{
     border-bottom: @color-caract-black solid 2px;
     width:70px;
     height: 2px;
+}
+
+div.traitLight{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: @light-grey solid 2px;
+    width:110px;
+    height: 2px;
+    float: none;
+    margin-top: 50px;
 }
 
 /*

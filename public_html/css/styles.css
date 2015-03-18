@@ -124,6 +124,29 @@ Partie de la page
 #team div.traitHBlack {
   margin-bottom: 35px;
 }
+#team div[class^="col-"] p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ef7920;
+  margin-top: 20px;
+}
+#team div.container {
+  margin-top: 50px;
+}
+#team div.traitLight + p {
+  margin-top: 5px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #363636;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #team div[class^="col-"]:last-child {
+    position: relative;
+    left: 188px;
+  }
+}
 @media only screen and (min-width: 992px) {
   #team div.traitHBlack + p {
     margin: 0 auto;
@@ -166,6 +189,16 @@ Partie what we do
   font-size: 16px;
   color: #ef7920;
   margin-top: 20px;
+}
+#do div[class^="col-"] div.circular {
+  filter: url('../js/filters.svg#grayscale');
+  filter: gray;
+  -webkit-backface-visibility: hidden;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1);
 }
 #do div[class^="col-"] div.circular:hover {
   filter: none;
@@ -457,14 +490,6 @@ Couleur et forme
   color: #ffffff;
 }
 .circular {
-  filter: url('../js/filters.svg#grayscale');
-  filter: gray;
-  -webkit-backface-visibility: hidden;
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(1);
-  -ms-filter: grayscale(1);
-  -o-filter: grayscale(1);
-  filter: grayscale(1);
   width: 240px;
   height: 240px;
   -webkit-border-radius: 50%;
@@ -503,6 +528,16 @@ div.traitHBlack {
   border-bottom: #363636 solid 2px;
   width: 70px;
   height: 2px;
+}
+div.traitLight {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: #c9c9c9 solid 2px;
+  width: 110px;
+  height: 2px;
+  float: none;
+  margin-top: 50px;
 }
 /*
 Boutons et formulaires
