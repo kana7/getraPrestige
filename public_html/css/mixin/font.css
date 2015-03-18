@@ -6,4 +6,10 @@ Auteur: Quentin Fonck
 /* 
     Created on : 14 mars 2015, 12:00:54
 */
+.text-justCentered {
+  text-align: justify;
+  margin: 0 auto;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
 /*# sourceMappingURL=font.css.map */

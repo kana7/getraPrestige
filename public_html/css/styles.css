@@ -23,6 +23,12 @@ Auteur: Quentin Fonck
 /* 
     Created on : 14 mars 2015, 12:00:54
 */
+.text-justCentered {
+  text-align: justify;
+  margin: 0 auto;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -46,6 +52,16 @@ Auteur: Quentin Fonck
 /* 
     Created on : 13 mars 2015, 22:04:33
 */
+.grayFilter {
+  filter: url('../js/filters.svg#grayscale');
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+.disableFilter {
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+}
 /*
 Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
@@ -64,8 +80,33 @@ Partie de la page
 #home {
   padding-bottom: 30px;
 }
-#home div.traitHBlack + p {
-  margin-top: 35px;
+#home div.traitHBlack {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 992px) {
+  #home div.traitHBlack + div {
+    width: 810px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #home div.traitHBlack + div {
+    width: 670px;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #home div.traitHBlack + div {
+    width: 300px;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
 }
 #team {
   padding-bottom: 30px;
@@ -75,8 +116,33 @@ Partie de la page
   -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
 }
-#team div.traitHBlack + p {
-  margin-top: 35px;
+#team div.traitHBlack {
+  margin-bottom: 35px;
+}
+@media only screen and (min-width: 992px) {
+  #team div.traitHBlack + p {
+    margin: 0 auto;
+    width: 810px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #team div.traitHBlack + p {
+    width: 670px;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #team div.traitHBlack + p {
+    width: 300px;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
 }
 /*
 Partie what we do
@@ -97,11 +163,10 @@ Partie what we do
   margin-top: 20px;
 }
 #do div[class^="col-"] div.circular:hover {
-  -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  filter: gray;
-  filter: grayscale(0%);
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+  cursor: pointer;
 }
 /*
 Partie contact us
@@ -387,11 +452,9 @@ Couleur et forme
   color: #ffffff;
 }
 .circular {
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+  filter: url('../js/filters.svg#grayscale');
   filter: gray;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
   width: 240px;
   height: 240px;
   -webkit-border-radius: 50%;

@@ -13,6 +13,12 @@ Auteur: Quentin Fonck
 /* 
     Created on : 14 mars 2015, 12:00:54
 */
+.text-justCentered {
+  text-align: justify;
+  margin: 0 auto;
+  text-align-last: center;
+  -moz-text-align-last: center;
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -36,4 +42,14 @@ Auteur: Quentin Fonck
 /* 
     Created on : 13 mars 2015, 22:04:33
 */
+.grayFilter {
+  filter: url('../js/filters.svg#grayscale');
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+.disableFilter {
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+}
 /*# sourceMappingURL=mixin.css.map */

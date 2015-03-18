@@ -5,4 +5,14 @@ Auteur: Quentin Fonck
 /* 
     Created on : 13 mars 2015, 22:04:33
 */
+.grayFilter {
+  filter: url('../js/filters.svg#grayscale');
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+.disableFilter {
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+}
 /*# sourceMappingURL=effect.css.map */
