@@ -17,7 +17,31 @@ Partie de la page
 
 header{
 
+}
 
+#slider{
+    #buttons{
+        height: auto;
+        button{
+            width: 25px;
+            height: 3px;
+            margin-right: 8px;
+            border: none;
+            background-color: @grey;
+            &:over{
+                background-color: @orange;
+            }
+        }
+    }
+    h1{
+        width: 350px;
+        margin: 0 auto;
+    }
+    #imgSlider{
+        height: 680px;
+        background: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg) no-repeat;
+        background-size: 100% auto;
+    }
 }
 
 #home{
@@ -65,7 +89,7 @@ header{
     div.container{
         margin-top: 50px;
     }
-    
+
     div.traitLight+p{
         margin-top: 5px;
         .regular(16px,@color-caract-black);
@@ -388,6 +412,7 @@ Titre et Texte
 */
 h1{
     .semiBold(@title-size, @white);
+    text-shadow: 0px 2px 8px #000000;
 }
 
 h2{

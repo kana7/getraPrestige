@@ -82,6 +82,28 @@ Partie de la page
   padding-right: 0px;
   padding-left: 0px;
 }
+#slider #buttons {
+  height: auto;
+}
+#slider #buttons button {
+  width: 25px;
+  height: 3px;
+  margin-right: 8px;
+  border: none;
+  background-color: #666565;
+}
+#slider #buttons button:over {
+  background-color: #ef7920;
+}
+#slider h1 {
+  width: 350px;
+  margin: 0 auto;
+}
+#slider #imgSlider {
+  height: 680px;
+  background: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg) no-repeat;
+  background-size: 100% auto;
+}
 #home {
   padding-bottom: 30px;
 }
@@ -436,6 +458,7 @@ h1 {
   font-weight: 600;
   font-size: 42px;
   color: #ffffff;
+  text-shadow: 0px 2px 8px #000000;
 }
 h2 {
   font-family: "Open Sans";
