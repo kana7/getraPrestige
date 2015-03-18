@@ -23,7 +23,7 @@ $(function () {
                         ]
                     }, {
                         stylers: [
-                            {hue: "#d89000"},
+                            {hue: "#ef7920"},
                             {saturation: -20}
                         ]
                     }, {
@@ -43,12 +43,14 @@ $(function () {
                 ]
             }
         },
+        
         marker: {
             values: [
                 {address: "16 Avenue du Dix Septembre, 2550 Luxembourg", data: "14, Avenue du X Septembre"}
             ],
             options: {
-                draggable: false
+                draggable: false,
+                icon : new google.maps.MarkerImage('img/logo/icon.png')
             },
             events: {
                 mouseover: function (marker, event, context) {

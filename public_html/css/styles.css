@@ -10,14 +10,14 @@ and open the template in the editor.
 */
 /* Gobal variiables*/
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
     Created on : 13 mars 2015, 22:04:33
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -39,14 +39,14 @@ and open the template in the editor.
     Author     : lol2
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
     Created on : 14 mars 2015, 11:21:53
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -68,7 +68,7 @@ Auteur: Quentin Fonck
   -webkit-filter: grayscale(0);
 }
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -81,31 +81,34 @@ Partie de la page
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
+  /* padding-top: 10px; */
 }
 header {
   display: block;
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 100;
+  top: 90px;
   -webkit-box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 header #wrapper {
-  overflow: hidden;
-  max-width: 75%;
-  margin: 0 28.5%;
+  width: 57%;
+  margin: 0 21.5%;
   padding: 0;
   min-width: 0;
 }
 header #wrapper #logo {
   float: left;
   margin: 20px 0px 11px 0px;
-  border: 0;
+  width: 200px;
+}
+header #wrapper #logo img {
+  width: 191px;
+  height: 59px;
 }
 header #wrapper nav {
-  margin: 29px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
   float: right;
   width: auto;
 }
@@ -117,12 +120,57 @@ header #wrapper nav ul {
 }
 header #wrapper nav ul li {
   float: left;
-  margin: 0 10px;
+  margin: 0 20px;
   text-align: center;
   display: block;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 0px 2px #000000;
 }
-#slider {
-  margin-top: 90px;
+header #wrapper nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header #wrapper nav ul li a:hover ~ div.menu {
+  border-bottom: #ef7920 solid 2px;
+}
+#slider .carousel-caption {
+  position: absolute;
+  right: 35%;
+  bottom: 190px;
+  margin-left: 3.2%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+#slider .carousel-caption .btn {
+  text-shadow: none;
+}
+#slider .carousel-indicators {
+  position: absolute;
+  bottom: 155px;
+  z-index: 15;
+  width: 23%;
+  margin-left: 23.6%;
+  padding-left: 0;
+  text-align: left;
+  list-style: none;
+}
+#slider .carousel-indicators li {
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  margin-right: 8px;
+  border: none;
+  background-color: #666565;
+  text-indent: -999px;
+  cursor: pointer;
+}
+#slider .carousel-indicators .active {
+  background-color: #ef7920;
 }
 #slider #buttons {
   height: auto;
@@ -288,27 +336,27 @@ Partie contact us
   margin-top: 35px;
   margin-bottom: 45px;
 }
-#contact div.row #coordonnÃ©e p {
+#contact div.row #coordonnée p {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
   text-shadow: 0px 2px #000000;
 }
-#contact div.row #coordonnÃ©e #data {
+#contact div.row #coordonnée #data {
   line-height: 185%;
 }
-#contact div.row #coordonnÃ©e img {
+#contact div.row #coordonnée img {
   margin-top: 15px;
   width: 242px;
   height: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  #contact div.row #coordonnÃ©e div[class^="col-"] {
-    width: 300px;
+  #contact div.row #coordonnée div[class^="col-"] {
+    width: 265px;
     display: inline-block;
   }
-  #contact div.row #coordonnÃ©e div.row #blocInfos {
+  #contact div.row #coordonnée div.row #blocInfos {
     width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -321,12 +369,10 @@ Partie contact us
 @media only screen and (min-width: 992px) {
   #contact #formulaire aside {
     margin-top: 30px;
+    padding-left: 75px;
   }
 }
 @media only screen and (min-width: 768px) {
-  #contact #formulaire aside {
-    padding-left: 40px;
-  }
   #contact #formulaire input {
     width: 257px;
   }
@@ -336,14 +382,15 @@ Partie contact us
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #contact #formulaire {
-    padding-bottom: 40px;
-    padding-top: 35px;
+    padding-bottom: 50px;
+    padding-left: 57px;
   }
   #contact #formulaire article {
     text-align: center;
   }
   #contact #formulaire aside {
     margin-top: 40px;
+    padding-left: 40px;
   }
   #contact #formulaire aside div.row p {
     text-align: left;
@@ -365,9 +412,7 @@ Partie contact us
     padding-left: 70px;
     padding-right: 70px;
   }
-  #contact #formulaire input {
-    float: none;
-  }
+  #contact #formulaire input,
   #contact #formulaire textarea {
     float: none;
   }
@@ -381,12 +426,14 @@ Partie contact us
 #contact #formulaire form input {
   float: none;
   height: 54px;
+  padding-left: 20px;
 }
 #contact #formulaire form textarea {
   float: none;
   resize: none;
   height: 244px;
   padding-top: 20px;
+  padding-left: 20px;
 }
 @media only screen and (min-width: 992px) {
   #contact #formulaire form input[type=submit] {
@@ -401,7 +448,7 @@ Partie contact us
   }
 }
 /*
-BanniÃ¨re de pied de page
+Bannière de pied de page
 
 */
 @media only screen and (max-width: 767px) {
@@ -604,6 +651,11 @@ div.traitLight {
   float: none;
   margin-top: 50px;
 }
+.menu {
+  -webkit-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+}
 /*
 Boutons et formulaires
 
@@ -660,9 +712,12 @@ textArea {
   -moz-box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
+input:focus,
+textArea:focus {
+  border: 1px #ffffff solid;
+}
 :focus {
   outline: none;
-  border: 1px #ffffff solid;
 }
 /*
 Alignement
@@ -687,5 +742,11 @@ Alignement
 input.input-space,
 textarea.input-space {
   margin-top: 30px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

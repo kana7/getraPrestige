@@ -17,27 +17,29 @@ Partie de la page
 
 header{
     display: block;
-    position: fixed;
-    top: 0;
     width: 100%;
     z-index: 100;
+    top: 90px;
     .drop-shadow(0px, 2px, 15px, 0, 0.5);
 
     #wrapper{
-        overflow: hidden;
-        max-width: 75%;
-        margin: 0 28.5%;
+        width: 57%;
+        margin: 0 21.5%;
         padding: 0;
         min-width: 0;
-        
+
         #logo{
             float: left;
             margin: 20px 0px 11px 0px;
-            border: 0;
+            width: 200px;
+            img{
+                width: 191px;
+                height: 59px;
+            }
         }
 
         nav{
-            margin: 29px 0px 0px 0px;
+            margin: 25px 0px 0px 0px;
             float: right;
             width: auto;
 
@@ -48,9 +50,23 @@ header{
                 border: 0;
                 li{
                     float: left;
-                    margin: 0 10px;
+                    margin: 0 20px;
                     text-align: center;
                     display: block;
+                    .semiBold(@menu-size, @white);
+                    text-shadow: 0px 2px #000000; 
+                    a{
+                        text-decoration: none;
+                        color: @white;
+                        &:focus{
+                            
+                        }
+                        &:hover{
+                            & ~ div.menu{
+                              border-bottom: @orange solid 2px;  
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -59,7 +75,44 @@ header{
 
 #slider{
 
-    margin-top:90px;
+    .carousel-caption {
+        position: absolute;
+        right: 35%;
+        bottom: 190px;
+        margin-left: 3.2%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+    .carousel-caption .btn {
+        text-shadow: none;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 155px;
+        z-index: 15;
+        width: 23%;
+        margin-left: 23.6%;
+        padding-left: 0;
+        text-align: left;
+        list-style: none;
+    }
+    .carousel-indicators li {
+        display: inline-block;
+        width: 25px;
+        height: 3px;
+        margin-right: 8px;
+        border: none;
+        background-color: @grey;
+        text-indent: -999px;
+        cursor: pointer;
+    }
+    .carousel-indicators .active {
+        background-color: @orange;
+    }
+
 
     #buttons{
         height: auto;
@@ -225,7 +278,7 @@ Partie contact us
 
             @media @tablet{
                 div[class^="col-"]{
-                    width: 300px;
+                    width: 265px;
                     display: inline-block;
                 }
                 div.row{
@@ -252,13 +305,11 @@ Partie contact us
         @media @desktop{
             aside{
                 margin-top: 30px;
+                padding-left: 75px;
             }            
         }
 
         @media @tab-desk{
-            aside{
-                padding-left: 40px;
-            }
             input{
                 width: 257px;
             }
@@ -269,16 +320,16 @@ Partie contact us
 
         @media @tablet{
 
-            padding-bottom: 40px;
-            padding-top: 35px;
+            padding-bottom: 50px;
+            padding-left: 57px;
 
             article{
                 text-align: center;
             }
 
             aside{
-
                 margin-top: 40px;
+                padding-left:40px;
 
                 div.row{
                     p{
@@ -306,10 +357,7 @@ Partie contact us
                 padding-left: 70px;
                 padding-right: 70px;
             }
-            input{
-                float:none;
-            }
-            textarea{
+            input ,textarea{
                 float:none;
             }
 
@@ -326,12 +374,14 @@ Partie contact us
             input{
                 float: none;
                 height: 54px;
+                padding-left: 20px;
             }
             textarea{
                 float: none;
                 resize: none;
                 height: 244px;
                 padding-top: 20px;
+                padding-left: 20px;
             }
             @media @desktop{
                 input[type=submit]{
@@ -540,6 +590,10 @@ div.traitLight{
     margin-top: 50px;
 }
 
+.menu{
+    .drop-shadow(0px, 2px, 1px, 0, 0.5);
+}
+
 /*
 Boutons et formulaires
 
@@ -570,9 +624,12 @@ input,textArea{
     .inner-shadow(0px, 2px, 15px, 0, 0.5);
 }
 
+input:focus,textArea:focus{
+    border: 1px @white solid;
+}
+
 :focus{
     outline: none;
-    border: 1px @white solid;
 }
 
 
@@ -600,4 +657,10 @@ Alignement
 
 input.input-space,textarea.input-space{
     margin-top: 30px;                
+}
+
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
 }
