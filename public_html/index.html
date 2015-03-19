@@ -219,14 +219,14 @@ and open the template in the editor.
                                 </div>
                                 <div id="formulaire" class="row bg-black">
                                     <article class="col-md-7 col-sm-12 text-right">
-                                        <form method="post" action="#">
+                                        <form method="post" action="MAILTO:quentin.fonck@gmail.com" enctype="text/plain" onsubmit="location.href='index.html';">
                                             <div id="firstLigne" style="padding-top: 3px;" class="row">
                                                 <input style="margin-right: 23px;" class="col-xs-12 col-sm-6 input-space" type="text" name="first" placeholder="First Name (required)"/>
                                                 <input class="col-xs-12 col-sm-6 input-space" type="text" name="last" placeholder="Last Name (required)"/>
                                             </div>
                                             <div class="row">
                                                 <input style="margin-right: 23px;" class="col-xs-12 col-sm-6 input-space" type="text" name="mail" placeholder="Your email (required)"/>
-                                                <input class="col-xs-12 col-sm-6 input-space" type="text" name="phone" placeholder="Your Phone Number"/>
+                                                <input class="col-xs-12 col-sm-6 input-space" type="email" name="phone" placeholder="Your Phone Number"/>
                                             </div>
                                             <div class="row">
                                                 <textarea placeholder="Your message..." class="col-xs-12 input-space"></textarea>
@@ -282,27 +282,36 @@ and open the template in the editor.
                             <script type="text/javascript" src="js/gmap3.js"></script>
                             <script type="text/javascript" src="js/main.js"></script>
                             <script>
-                                
+
                                 $(document).ready(function () {
                                     var sticky = $(".sticky");
                                     var height = $('header').height();
+                                    
+                                    $(function () {
+                                        $('.sticky').data('size', 'big');
+                                    });
 
                                     $(window).scroll(function () {
+                                        var $nav = $('.sticky');
                                         if ($('body').scrollTop() > 0) {
-                                            //$('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
-                                            $('nav').css('margin', '10px 0px 10px 0px');
-                                            $('#logo').fadeOut(200, function () {
-                                                $('header').animate({height: "52px"}, 300);
-                                            });
-                                            $('.sticky').addClass('fixed');
-                                            $('.sticky').removeClass('block');
+                                            if ($nav.data('size') == 'big') {
+                                                $('#gap').animate({height:'0px'},800);
+                                                $nav.data('size', 'small').stop().animate({
+                                                    height: '52px'
+                                                }, 600);
+                                                $('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
+                                                $('#logo').animate({marginTop:"9px", marginBottom:"11px",width:"161px", height:"54px"},500);
+                                            }
                                         } else {
-                                            //('nav').animate({marginTop: "25px"}, 500);
-                                            $('header').animate({height: "90px"}, 0);
-                                            $('nav').css('margin', '25px 0px 0px 0px');
-                                            $('#logo').fadeIn(500);
-                                            $('.sticky').addClass('block');
-                                            $('.sticky').removeClass('fixed');
+                                            if ($nav.data('size') == 'small') {
+                                                $nav.data('size', 'big').stop().animate({
+                                                    height: '90px'
+                                                }, 600);
+                                                $('nav').animate({marginTop: "25px", marginBottom: "0px"}, 500);
+                                                $('#logo').animate({marginTop:"20px", marginBottom:"11px",width:"191px", height:"59px"},500);
+                                                $('#gap').animate({height:'90px'},800);
+
+                                            }
                                         }
                                     });
 

@@ -4,8 +4,7 @@ $(function () {
             options: {
                 center: [49.609314, 6.118184],
                 zoom: 16,
-                maxZoom: 20,
-                minZoom: 14,
+                scrollwheel: false,
                 mapMaker: false,
                 mapTypeControl: false,
                 panControl: false,
