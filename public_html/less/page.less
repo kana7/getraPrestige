@@ -15,6 +15,11 @@ Partie de la page
     padding-left: 0px; 
 }
 
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 header{
     position:fixed;
     width: 100%;
@@ -45,7 +50,7 @@ header{
                 }
             }
         }
-       
+
         nav{
             margin: 25px 0px 0px 0px;
             float: right;
@@ -61,6 +66,9 @@ header{
                     margin: 0 20px;
                     text-align: center;
                     display: block;
+                    @media @tablet{
+                        .semiBold(14px, @white);
+                    }
                     .semiBold(@menu-size, @white);
                     text-shadow: 0px 2px #000000; 
                     a{
@@ -74,6 +82,9 @@ header{
                                 border-bottom: @orange solid 2px;  
                             }
                         }
+                        div.menu{
+                            .transition(all 0.7s ease);
+                        }
                     }
                 }
             }
@@ -84,7 +95,6 @@ header{
 #gap{
     display: block;
     height: 90px;
-    /* margin-top: -205px; */
     visibility: hidden;
 }
 
@@ -128,20 +138,6 @@ header{
         background-color: @orange;
     }
 
-
-    #buttons{
-        height: auto;
-        button{
-            width: 25px;
-            height: 3px;
-            margin-right: 8px;
-            border: none;
-            background-color: @grey;
-            &:over{
-                background-color: @orange;
-            }
-        }
-    }
     h1{
         width: 350px;
         margin: 0 auto;
@@ -251,12 +247,21 @@ Partie what we do
     div[class^="col-"]{
         div.circular{
             .grayFilter;
+            .transition(all 0.7s ease);
+            &:hover{
+                .disableFilter;
+                cursor: pointer;
+                &+p{
+                    color:@orange;
+                }
+            }
         }
-        div.circular:hover{
-            .disableFilter;
-            cursor: pointer;
+        p{
+            color:@color-caract-black;
+            .transition(all 0.7s ease);
         }
     }
+    
 }
 
 
@@ -553,6 +558,9 @@ Couleur et forme
 .orange{
     color: @orange;
 }
+.menu-active{
+    border-bottom-color: @orange;
+}
 
 .bg-black{
     .gradient(@light-black, @deep-black);
@@ -607,6 +615,10 @@ div.traitLight{
 
 .menu{
     .drop-shadow(0px, 2px, 1px, 0, 0.5);
+}
+
+.service-active:focus{
+    .disableFilter;
 }
 
 /*

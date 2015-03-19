@@ -1,0 +1,26 @@
+«MAIL SERVER mail.internet.lu»
+
+«MAIL TO mkremer@internet.lu»
+
+«MAIL FROM lolcloud_inscription@internet.lu»
+«MAIL SUBJECT LOL CLOUD Inscription»
+«OUTPUT MAIL»
+
+LOL CLOUD Inscription
+
+Nom :«nom»
+Prénom :«prenom»
+Addresse :«adresse»
+Code Postal :«cp»
+Localité :«localite»
+Tél :«tel»
+E-mail :«email»
+
+Comment nous-avez vous connu? «referer»
+
+«/OUTPUT»
+«MAIL SEND»
+<META http-equiv="refresh" content="0;URL=http://www.internet.lu/lolcloud_inscription_confirm.html">
+
+
+

@@ -81,6 +81,10 @@ Partie de la page
   padding-right: 0px;
   padding-left: 0px;
 }
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 header {
   position: fixed;
   width: 100%;
@@ -137,6 +141,14 @@ header #wrapper nav ul li {
   color: #ffffff;
   text-shadow: 0px 2px #000000;
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  header #wrapper nav ul li {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+  }
+}
 header #wrapper nav ul li a {
   text-decoration: none;
   color: #ffffff;
@@ -144,10 +156,15 @@ header #wrapper nav ul li a {
 header #wrapper nav ul li a:hover ~ div.menu {
   border-bottom: #ef7920 solid 2px;
 }
+header #wrapper nav ul li a div.menu {
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
 #gap {
   display: block;
   height: 90px;
-  /* margin-top: -205px; */
   visibility: hidden;
 }
 #slider .carousel-caption {
@@ -184,19 +201,6 @@ header #wrapper nav ul li a:hover ~ div.menu {
   cursor: pointer;
 }
 #slider .carousel-indicators .active {
-  background-color: #ef7920;
-}
-#slider #buttons {
-  height: auto;
-}
-#slider #buttons button {
-  width: 25px;
-  height: 3px;
-  margin-right: 8px;
-  border: none;
-  background-color: #666565;
-}
-#slider #buttons button:over {
   background-color: #ef7920;
 }
 #slider h1 {
@@ -324,12 +328,26 @@ Partie what we do
   -ms-filter: grayscale(1);
   -o-filter: grayscale(1);
   filter: grayscale(1);
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
 }
 #do div[class^="col-"] div.circular:hover {
   filter: none;
   /* Applies to FF + IE */
   -webkit-filter: grayscale(0);
   cursor: pointer;
+}
+#do div[class^="col-"] div.circular:hover + p {
+  color: #ef7920;
+}
+#do div[class^="col-"] p {
+  color: #363636;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
 }
 /*
 Partie contact us
@@ -603,6 +621,9 @@ Couleur et forme
 .orange {
   color: #ef7920;
 }
+.menu-active {
+  border-bottom-color: #ef7920;
+}
 .bg-black {
   background-color: #403f3f;
   background: -webkit-gradient(linear, left top, left bottom, from(#403f3f), to(#262626));
@@ -668,6 +689,11 @@ div.traitLight {
   -webkit-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
+}
+.service-active:focus {
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
 }
 /*
 Boutons et formulaires

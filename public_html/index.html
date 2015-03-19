@@ -128,14 +128,14 @@ and open the template in the editor.
                                     <div id="imagesServices" class="row">
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/housecaretaking.jpg) no-repeat; background-position: 40% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">HOUSECARETAKING</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/de_icing.jpg) no-repeat; background-position: 60% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">DE-ICING & SALTING</p>
                                             </div>
@@ -143,56 +143,56 @@ and open the template in the editor.
 
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/gardening.jpg) no-repeat; background-position: 80% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">GARDENING</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/welcomehome.jpg) no-repeat; background-position: 45% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">WELCOMEHOME</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/concierge.jpg) no-repeat; background-position: 30% 95%" class="col-xs-12 circular col-center"><a href="#" onclick=""></a></div>
                                                 <p class="col-xs-12 text-center">CONCIERGE</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/alacarte.jpg) no-repeat; background-position: 40% 15%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">À LA CARTE</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/modernisation_refurbishment.jpg) no-repeat; background-position: 10% 0%" class="col-xs-12 circular col-center grey"></div>
                                                 <p class="col-xs-12 text-center">MODERNISATION &<br/>REFURBISHMENT</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/homedesign.jpg) no-repeat; background-position: 45% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">HOMEDESIGN</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/keepitclean.jpg) no-repeat; background-position: 45% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">KEEPITCLEAN</p>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12 hight">
-                                            <div class="row">
+                                            <div class="row service">
                                                 <div style="background: url(img/Web/Services/mailforward.jpg) no-repeat; background-position: 45% 0%" class="col-xs-12 circular col-center"></div>
                                                 <p class="col-xs-12 text-center">MAILFORWARD</p>
                                             </div>
@@ -219,7 +219,7 @@ and open the template in the editor.
                                 </div>
                                 <div id="formulaire" class="row bg-black">
                                     <article class="col-md-7 col-sm-12 text-right">
-                                        <form method="post" action="MAILTO:quentin.fonck@gmail.com" enctype="text/plain" onsubmit="location.href='index.html';">
+                                        <form method="post" action="MAILTO:quentin.fonck@gmail.com" enctype="text/plain" onsubmit="location.href = 'index.html';">
                                             <div id="firstLigne" style="padding-top: 3px;" class="row">
                                                 <input style="margin-right: 23px;" class="col-xs-12 col-sm-6 input-space" type="text" name="first" placeholder="First Name (required)"/>
                                                 <input class="col-xs-12 col-sm-6 input-space" type="text" name="last" placeholder="Last Name (required)"/>
@@ -281,68 +281,5 @@ and open the template in the editor.
                             <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
                             <script type="text/javascript" src="js/gmap3.js"></script>
                             <script type="text/javascript" src="js/main.js"></script>
-                            <script>
-
-                                $(document).ready(function () {
-                                    var sticky = $(".sticky");
-                                    var height = $('header').height();
-                                    
-                                    $(function () {
-                                        $('.sticky').data('size', 'big');
-                                    });
-
-                                    $(window).scroll(function () {
-                                        var $nav = $('.sticky');
-                                        if ($('body').scrollTop() > 0) {
-                                            if ($nav.data('size') == 'big') {
-                                                $('#gap').animate({height:'0px'},800);
-                                                $nav.data('size', 'small').stop().animate({
-                                                    height: '52px'
-                                                }, 600);
-                                                $('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
-                                                $('#logo').animate({marginTop:"9px", marginBottom:"11px",width:"161px", height:"54px"},500);
-                                            }
-                                        } else {
-                                            if ($nav.data('size') == 'small') {
-                                                $nav.data('size', 'big').stop().animate({
-                                                    height: '90px'
-                                                }, 600);
-                                                $('nav').animate({marginTop: "25px", marginBottom: "0px"}, 500);
-                                                $('#logo').animate({marginTop:"20px", marginBottom:"11px",width:"191px", height:"59px"},500);
-                                                $('#gap').animate({height:'90px'},800);
-
-                                            }
-                                        }
-                                    });
-
-
-
-
-                                    $('a[href*=#]:not([href=#])').click(function () {
-                                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                                                && location.hostname == this.hostname) {
-
-                                            var target = $(this.hash);
-                                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                                            if (target.length) {
-                                                $('html,body').animate({
-                                                    scrollTop: target.offset().top - (height + 30) //offsets for fixed header
-                                                }, 1000);
-                                                return false;
-                                            }
-                                        }
-                                    });
-                                    //Executed on page load with URL containing an anchor tag.
-                                    if ($(location.href.split("#")[1])) {
-                                        var target = $('#' + location.href.split("#")[1]);
-                                        if (target.length) {
-                                            $('html,body').animate({
-                                                scrollTop: target.offset().top - (height + 30) //offset height of header here too.
-                                            }, 1000);
-                                            return false;
-                                        }
-                                    }
-                                });
-                            </script>
                         </body>
                         </html>
