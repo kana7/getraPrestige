@@ -45,7 +45,6 @@ Auteur: Quentin Fonck
 .grayFilter {
   filter: url('../js/filters.svg#grayscale');
   filter: gray;
-  -webkit-backface-visibility: hidden;
   -webkit-filter: grayscale(1);
   -moz-filter: grayscale(1);
   -ms-filter: grayscale(1);
