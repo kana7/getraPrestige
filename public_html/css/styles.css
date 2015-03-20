@@ -141,26 +141,12 @@ header #wrapper nav ul li {
   color: #ffffff;
   text-shadow: 0px 2px #000000;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  header #wrapper nav ul li {
-    font-family: "Open Sans";
-    font-weight: 600;
-    font-size: 14px;
-    color: #ffffff;
-  }
-}
 header #wrapper nav ul li a {
   text-decoration: none;
   color: #ffffff;
 }
-header #wrapper nav ul li a:hover ~ div.menu {
+header #wrapper nav ul li a.active + div.traitLight {
   border-bottom: #ef7920 solid 2px;
-}
-header #wrapper nav ul li a div.menu {
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -ms-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
 }
 #gap {
   display: block;
@@ -320,6 +306,14 @@ Partie what we do
   color: #ef7920;
   margin-top: 20px;
 }
+#do div[class^="col-"] div.row.service.active div.col-xs-12.circular.col-center {
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+}
+#do div[class^="col-"] div.row.service.active div.col-xs-12.circular.col-center + p.text-center {
+  color: #ef7920;
+}
 #do div[class^="col-"] div.circular {
   filter: url('../js/filters.svg#grayscale');
   filter: gray;
@@ -332,12 +326,18 @@ Partie what we do
   -moz-transition: all 0.7s ease;
   -ms-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
+  cursor: pointer;
+}
+#do div[class^="col-"] div.circular + p {
+  cursor: pointer;
+}
+#do div[class^="col-"] div.circular + p:hover {
+  color: #ef7920;
 }
 #do div[class^="col-"] div.circular:hover {
   filter: none;
   /* Applies to FF + IE */
   -webkit-filter: grayscale(0);
-  cursor: pointer;
 }
 #do div[class^="col-"] div.circular:hover + p {
   color: #ef7920;
@@ -690,10 +690,10 @@ div.traitLight {
   -moz-box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.5);
 }
-.service-active:focus {
-  filter: none;
+div.col-xs-12.circular.col-center.service-active {
+  filter: none !important;
   /* Applies to FF + IE */
-  -webkit-filter: grayscale(0);
+  -webkit-filter: grayscale(0) !important;
 }
 /*
 Boutons et formulaires

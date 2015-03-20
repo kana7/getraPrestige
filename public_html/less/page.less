@@ -61,30 +61,21 @@ header{
                 margin: 0;
                 list-style: none;
                 border: 0;
+
                 li{
                     float: left;
                     margin: 0 20px;
                     text-align: center;
                     display: block;
-                    @media @tablet{
-                        .semiBold(14px, @white);
-                    }
+
                     .semiBold(@menu-size, @white);
                     text-shadow: 0px 2px #000000; 
                     a{
                         text-decoration: none;
                         color: @white;
-                        &:focus{
-
-                        }
-                        &:hover{
-                            & ~ div.menu{
-                                border-bottom: @orange solid 2px;  
-                            }
-                        }
-                        div.menu{
-                            .transition(all 0.7s ease);
-                        }
+                    }
+                    a.active+div.traitLight{
+                        border-bottom: @orange solid 2px;
                     }
                 }
             }
@@ -245,23 +236,39 @@ Partie what we do
     }
 
     div[class^="col-"]{
-        div.circular{
-            .grayFilter;
-            .transition(all 0.7s ease);
-            &:hover{
+        div.row.service.active{
+            div.col-xs-12.circular.col-center{
                 .disableFilter;
-                cursor: pointer;
-                &+p{
+                &+p.text-center{
                     color:@orange;
                 }
             }
         }
+
+        div.circular{
+            .grayFilter;
+            .transition(all 0.7s ease);
+            cursor: pointer;
+            
+            &+p{
+                cursor: pointer;
+                &:hover{
+                     color:@orange;
+                }
+            }
+            &:hover{
+                .disableFilter;
+                &+p{
+                    color:@orange;
+                }
+            }
+        }        
         p{
             color:@color-caract-black;
             .transition(all 0.7s ease);
         }
     }
-    
+
 }
 
 
@@ -617,8 +624,8 @@ div.traitLight{
     .drop-shadow(0px, 2px, 1px, 0, 0.5);
 }
 
-.service-active:focus{
-    .disableFilter;
+div.col-xs-12.circular.col-center.service-active{
+    .disableFilter !important;
 }
 
 /*

@@ -1,5 +1,5 @@
 $(function () {
-    
+
     /* Google Map*/
     $('#mymap').gmap3({
         map: {
@@ -78,20 +78,45 @@ $(function () {
         }
     });
 
-    /*Over animation*/
-    $('#menu li a').click(function () {
-        $('div.menu').toggleClass('menu-active');
+    /*On over transistion for header*/
+
+
+    $('#menu li a').mouseover(function () {
+        $(this).next().animate({borderBottomColor: "#ef7920"}, '800');
     });
+    $('#menu li a').mouseout(function () {
+        $(this).next().animate({borderBottomColor: "#c9c9c9"}, '800');
+    });
+
+    /*
+     $('#menu li a').click(function () {
+     $(this).toggleClass("active");
+     $("#menu li a").not(this).removeClass("active");
+     });
+     */
+
+
+    /*Active state for services*/
+
+    $("div.service").click(function () {
+        $(this).toggleClass("active");
+        $("div.service").not(this).removeClass("active");
+    });
+
+    $("div.row.service>p").hover(function () {
+        $(this).prev().toggleClass("service-active", 700);
+    });
+
 
 
     /*Display text*/
 
-    $('.service').click(function(){
-        
-        var p=$(this).children("p");
-        var div=$(this).children("div");
-        $(p).toggleClass("focused",p.is(":focus"));
-        $(div).toggleClass("focused",div.is(":focus"));
+    $('.service').click(function () {
+
+        var p = $(this).children("p");
+        var div = $(this).children("div");
+        $(p).toggleClass("focused", p.is(":focus"));
+        $(div).toggleClass("focused", div.is(":focus"));
         $(this).after("<p class=\"col-xs-12 text-center\">Ceci est un test</p>");
     });
 
