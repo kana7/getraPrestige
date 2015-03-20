@@ -29,8 +29,8 @@ header{
     .drop-shadow(0px, 2px, 15px, 0, 0.5);
 
     #wrapper{
-        width: 74%;
-        margin: 0 15%;
+        width: 75%;
+        margin: 0 auto;
         padding: 0;
         min-width: 0;
 
@@ -149,8 +149,14 @@ header{
 
     div.traitHBlack+div{
 
+        @media @large-desktop{
+            width: 1380px !important;
+            text-align: center;
+            margin:0 auto;
+        }
+
         @media @desktop{
-            width: 810px;
+            width: 990px;
             text-align: center;
             margin:0 auto;
         }
@@ -161,13 +167,19 @@ header{
         }
 
         @media @phone{
-            width: 300px;
+            width: 80%;;
             .text-justCentered;
         }
     }
 }
 
 #team{
+    div.container{
+        @media @large-desktop{
+            width:1815px;
+        }
+    }
+
     padding-bottom: 30px;
     margin-left: 0px;
     background-color: @color-bg;
@@ -203,7 +215,7 @@ header{
     div.traitHBlack+p{
         @media @desktop{
             margin: 0 auto;
-            width: 810px;
+            width: 80%;
             text-align: center;
         }
 
@@ -224,6 +236,12 @@ Partie what we do
 
 */
 #do{
+    div.container{
+        @media @large-desktop{
+            width:1815px;
+        }
+    }
+
     padding-bottom: 50px;
     div.traitHBlack+p{
         margin-top: 35px;
@@ -249,11 +267,11 @@ Partie what we do
             .grayFilter;
             .transition(all 0.7s ease);
             cursor: pointer;
-            
+
             &+p{
                 cursor: pointer;
                 &:hover{
-                     color:@orange;
+                    color:@orange;
                 }
             }
             &:hover{
@@ -326,8 +344,36 @@ Partie contact us
     
     */
     #formulaire{
+        .container{
+            @media @large-desktop{
+                width:1815px;
+            }
+        }
+
         padding-bottom: 50px;
         padding-top: 45px;
+
+        @media @large-desktop{
+            aside{
+                position: relative;
+                left: 96px;
+                padding-left:0px !important;
+            }       
+            article{
+                position: relative;
+                right: 50px;
+
+                input{
+                    width: 395px;
+                }
+                textarea{
+                    width: 817px;
+                }
+                input[type=submit]{
+                    right:422px !important;
+                }
+            }
+        }
 
         @media @desktop{
             aside{
@@ -335,6 +381,7 @@ Partie contact us
                 padding-left: 75px;
             }            
         }
+
 
         @media @tab-desk{
             input{
@@ -356,7 +403,7 @@ Partie contact us
 
             aside{
                 margin-top: 40px;
-                padding-left:40px;
+                padding-left:65px;
 
                 div.row{
                     p{
@@ -682,10 +729,18 @@ Alignement
 }
 
 .hight{
-    margin-top: 15px;
+
+    @media @desktop{
+        margin-top: 35px;
+    }
+
     @media @tablet{
-        margin-top: -15px;
+        margin-top: 15px;
         height: 325px;
+    }
+
+    @media @phone{
+        margin-top: 35px;
     }
 }
 

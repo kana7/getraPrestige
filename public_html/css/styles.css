@@ -96,8 +96,8 @@ header {
   box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 header #wrapper {
-  width: 74%;
-  margin: 0 15%;
+  width: 75%;
+  margin: 0 auto;
   padding: 0;
   min-width: 0;
 }
@@ -204,9 +204,16 @@ header #wrapper nav ul li a.active + div.traitLight {
 #home div.traitHBlack {
   margin-bottom: 30px;
 }
+@media only screen and (min-width: 1700px) {
+  #home div.traitHBlack + div {
+    width: 1380px !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 992px) {
   #home div.traitHBlack + div {
-    width: 810px;
+    width: 990px;
     text-align: center;
     margin: 0 auto;
   }
@@ -222,7 +229,7 @@ header #wrapper nav ul li a.active + div.traitLight {
 }
 @media only screen and (max-width: 767px) {
   #home div.traitHBlack + div {
-    width: 300px;
+    width: 80%;
     text-align: justify;
     margin: 0 auto;
     text-align-last: center;
@@ -236,6 +243,11 @@ header #wrapper nav ul li a.active + div.traitLight {
   -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 1700px) {
+  #team div.container {
+    width: 1815px;
+  }
 }
 #team div.traitHBlack {
   margin-bottom: 35px;
@@ -266,7 +278,7 @@ header #wrapper nav ul li a.active + div.traitLight {
 @media only screen and (min-width: 992px) {
   #team div.traitHBlack + p {
     margin: 0 auto;
-    width: 810px;
+    width: 80%;
     text-align: center;
   }
 }
@@ -294,6 +306,11 @@ Partie what we do
 */
 #do {
   padding-bottom: 50px;
+}
+@media only screen and (min-width: 1700px) {
+  #do div.container {
+    width: 1815px;
+  }
 }
 #do div.traitHBlack + p {
   margin-top: 35px;
@@ -397,6 +414,31 @@ Partie contact us
   padding-bottom: 50px;
   padding-top: 45px;
 }
+@media only screen and (min-width: 1700px) {
+  #contact #formulaire .container {
+    width: 1815px;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  #contact #formulaire aside {
+    position: relative;
+    left: 96px;
+    padding-left: 0px !important;
+  }
+  #contact #formulaire article {
+    position: relative;
+    right: 50px;
+  }
+  #contact #formulaire article input {
+    width: 395px;
+  }
+  #contact #formulaire article textarea {
+    width: 817px;
+  }
+  #contact #formulaire article input[type=submit] {
+    right: 422px !important;
+  }
+}
 @media only screen and (min-width: 992px) {
   #contact #formulaire aside {
     margin-top: 30px;
@@ -421,7 +463,7 @@ Partie contact us
   }
   #contact #formulaire aside {
     margin-top: 40px;
-    padding-left: 40px;
+    padding-left: 65px;
   }
   #contact #formulaire aside div.row p {
     text-align: left;
@@ -769,13 +811,20 @@ Alignement
   margin: 0 auto;
   float: none;
 }
-.hight {
-  margin-top: 15px;
+@media only screen and (min-width: 992px) {
+  .hight {
+    margin-top: 35px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .hight {
-    margin-top: -15px;
+    margin-top: 15px;
     height: 325px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hight {
+    margin-top: 35px;
   }
 }
 input.input-space,
