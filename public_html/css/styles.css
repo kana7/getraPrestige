@@ -148,12 +148,29 @@ header #wrapper nav ul li a {
 header #wrapper nav ul li a.active + div.traitLight {
   border-bottom: #ef7920 solid 2px;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 #gap {
   display: block;
   height: 90px;
   visibility: hidden;
 }
-#slider .carousel-caption {
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+.carousel .item {
+  background-color: #777;
+}
+.carousel-inner {
+  height: 100%;
+}
+.carousel-caption {
   position: absolute;
   right: 35%;
   bottom: 190px;
@@ -163,10 +180,7 @@ header #wrapper nav ul li a.active + div.traitLight {
   padding-bottom: 20px;
   text-align: left;
 }
-#slider .carousel-caption .btn {
-  text-shadow: none;
-}
-#slider .carousel-indicators {
+.carousel-indicators {
   position: absolute;
   bottom: 155px;
   z-index: 15;
@@ -176,7 +190,7 @@ header #wrapper nav ul li a.active + div.traitLight {
   text-align: left;
   list-style: none;
 }
-#slider .carousel-indicators li {
+.carousel-indicators li {
   display: inline-block;
   width: 25px;
   height: 3px;
@@ -186,17 +200,24 @@ header #wrapper nav ul li a.active + div.traitLight {
   text-indent: -999px;
   cursor: pointer;
 }
-#slider .carousel-indicators .active {
+.carousel-indicators .active {
   background-color: #ef7920;
 }
-#slider h1 {
-  width: 350px;
-  margin: 0 auto;
+.carousel .carousel-inner .bg {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#slider #imgSlider {
-  height: 680px;
-  background: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg) no-repeat;
-  background-size: 100% auto;
+.carousel .carousel-inner .bg1 {
+  background-image: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg);
+  background-position: center top;
+}
+.carousel .carousel-inner .bg2 {
+  background-image: url(../img/Web/Slider/Slider_1920x544_Laundry.jpg);
+  background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+  background-image: url(../img/Web/Slider/Slider_1920x544_Welcomhome.jpg);
+  background-position: center bottom;
 }
 #home {
   padding-bottom: 30px;
@@ -293,7 +314,7 @@ header #wrapper nav ul li a.active + div.traitLight {
 }
 @media only screen and (max-width: 767px) {
   #team div.traitHBlack + p {
-    width: 300px;
+    width: 80%;
     text-align: justify;
     margin: 0 auto;
     text-align-last: center;

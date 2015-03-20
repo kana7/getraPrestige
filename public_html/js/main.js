@@ -163,7 +163,7 @@ $(function () {
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
-                    scrollTop: target.offset().top - (height + 30) //offsets for fixed header
+                    scrollTop: target.offset().top - (height) //offsets for fixed header
                 }, 1000);
                 return false;
             }
@@ -174,7 +174,7 @@ $(function () {
         var target = $('#' + location.href.split("#")[1]);
         if (target.length) {
             $('html,body').animate({
-                scrollTop: target.offset().top - (height + 30) //offset height of header here too.
+                scrollTop: target.offset().top - (height) //offset height of header here too.
             }, 1000);
             return false;
         }

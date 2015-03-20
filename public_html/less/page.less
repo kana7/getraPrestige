@@ -83,61 +83,80 @@ header{
     }
 }
 
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
 #gap{
     display: block;
     height: 90px;
     visibility: hidden;
 }
 
-#slider{
+.carousel, .item, .active {
+    height:100%;
+}
 
-    .carousel-caption {
-        position: absolute;
-        right: 35%;
-        bottom: 190px;
-        margin-left: 3.2%;
-        z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: left;
-    }
-    .carousel-caption .btn {
-        text-shadow: none;
-    }
+.carousel .item {
+    background-color: #777;
+} 
 
-    .carousel-indicators {
-        position: absolute;
-        bottom: 155px;
-        z-index: 15;
-        width: 23%;
-        margin-left: 23.6%;
-        padding-left: 0;
-        text-align: left;
-        list-style: none;
-    }
-    .carousel-indicators li {
-        display: inline-block;
-        width: 25px;
-        height: 3px;
-        margin-right: 8px;
-        border: none;
-        background-color: @grey;
-        text-indent: -999px;
-        cursor: pointer;
-    }
-    .carousel-indicators .active {
-        background-color: @orange;
-    }
+.carousel-inner {
+    height:100%;
+}
 
-    h1{
-        width: 350px;
-        margin: 0 auto;
-    }
-    #imgSlider{
-        height: 680px;
-        background: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg) no-repeat;
-        background-size: 100% auto;
-    }
+.carousel-caption {
+    position: absolute;
+    right: 35%;
+    bottom: 190px;
+    margin-left: 3.2%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 155px;
+    z-index: 15;
+    width: 23%;
+    margin-left: 23.6%;
+    padding-left: 0;
+    text-align: left;
+    list-style: none;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    margin-right: 8px;
+    border: none;
+    background-color: @grey;
+    text-indent: -999px;
+    cursor: pointer;
+}
+.carousel-indicators .active {
+    background-color: @orange;
+}
+
+.carousel .carousel-inner .bg {
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.carousel .carousel-inner .bg1 {
+    background-image:url(../img/Web/Slider/Slider_1920x544_Gardening.jpg);
+    background-position: center top;
+}
+.carousel .carousel-inner .bg2 {
+    background-image:url(../img/Web/Slider/Slider_1920x544_Laundry.jpg);
+    background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+    background-image:url(../img/Web/Slider/Slider_1920x544_Welcomhome.jpg);
+    background-position: center bottom;
 }
 
 #home{
@@ -225,7 +244,7 @@ header{
         }
 
         @media @phone{
-            width: 300px;
+            width: 80%;
             .text-justCentered;
         }
     }
