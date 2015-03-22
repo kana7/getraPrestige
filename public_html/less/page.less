@@ -29,10 +29,11 @@ header{
     .drop-shadow(0px, 2px, 15px, 0, 0.5);
 
     #wrapper{
-        width: 75%;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
         padding: 0;
-        min-width: 0;
+
 
         #logo{
             float: left;
@@ -40,6 +41,11 @@ header{
             z-index:112;
             width: 191px;
             height:59px;
+            @media @phone{
+                width: 130px;
+                height:40px;
+                margin: 32px 0px 11px 0px;
+            }
             img{
                 width: 100%;
                 height: 100%; 
@@ -52,7 +58,7 @@ header{
             float: right;
             width: auto;
 
-            ul{
+            #menu{
                 padding: 0;
                 margin: 0;
                 list-style: none;
@@ -75,8 +81,93 @@ header{
                     }
                 }
             }
+
+            #menu2{
+                position:relative;
+                button{
+                    position: relative;
+                    bottom: 13px;
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    .transition(all 0.7s ease);
+                    svg{
+                        fill:@white;
+                        .transition(all 0.7s ease);
+                        &:hover, &:active{
+                            fill:@orange;
+                        }
+                    }
+                }
+                button.active{
+                    svg{
+                        fill:@orange;
+                    }
+                }
+            }
         }
     }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 0px 0;
+    margin: 0 auto;
+    .semiBold(@menu-size, @white);
+    list-style: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-bottom: @deep-black 1px solid;
+    border-left: @deep-black 1px solid;
+    border-right: @deep-black 1px solid;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, .5);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .5);
+    li{
+        float: left;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        display: block;
+        padding-top: 7px;
+        border-top: @deep-black solid 1px;
+        border-bottom: @grey solid 2px;
+        .semiBold(@menu-size, @white);
+        text-shadow: 0px 2px #000000; 
+        a{
+            text-decoration: none;
+            color: @white;
+            &:hover ,&:focus{
+                text-decoration: none;
+                outline:none;
+            }
+        }
+    }
+    li.active{
+            background: @grey !important;
+            border-bottom: @orange solid 2px !important;
+        }
+    @media @tablet{
+        left: -524px;
+        width: 590px;
+    }
+    @media @phone{
+        left: -191px;
+        width: 255px;
+    }
+}
+.shadow {
+    -webkit-filter: drop-shadow(0px 2px 0px rgba(0,0,0,1));
+    filter: drop-shadow(0px 2px 0px rgba(0,0,0,1));
 }
 
 html, body {
@@ -359,7 +450,6 @@ Partie contact us
 
         }        
     }  
-
 
     /*
     Partie formulaire

@@ -107,7 +107,21 @@ $(function () {
         $(this).prev().toggleClass("service-active", 700);
     });
 
+    /*Active state icon menu*/
+    $("#menu1").click(function () {
+        $("#menu1").toggleClass("active");
+    });
+    $("#menu1").blur(function () {
+        $("#menu1").removeClass("active");
+    });
+   
 
+    $("ul.dropdown-menu li a").click(function () {
+        $(this).parent().toggleClass("active");
+    });
+    $("ul.dropdown-menu li a").blur(function () {
+        $(this).parent().removeClass("active");
+    });
 
     /*Display text*/
 
@@ -120,38 +134,39 @@ $(function () {
         $(this).after("<p class=\"col-xs-12 text-center\">Ceci est un test</p>");
     });
 
-    /* Animation for header*/
-    var sticky = $(".sticky");
     var height = $('header').height();
-
-    $(function () {
-        $('.sticky').data('size', 'big');
-    });
-
-    $(window).scroll(function () {
-        var $nav = $('.sticky');
-        if ($('body').scrollTop() > 0) {
-            if ($nav.data('size') == 'big') {
-                $('#gap').animate({height: '0px'}, 800);
-                $nav.data('size', 'small').stop().animate({
-                    height: '52px'
-                }, 600);
-                $('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
-                $('#logo').animate({marginTop: "9px", marginBottom: "11px", width: "130px", height: "40px"}, 500);
-            }
-        } else {
-            if ($nav.data('size') == 'small') {
-                $nav.data('size', 'big').stop().animate({
-                    height: '90px'
-                }, 600);
-                $('nav').animate({marginTop: "25px", marginBottom: "0px"}, 500);
-                $('#logo').animate({marginTop: "20px", marginBottom: "11px", width: "191px", height: "59px"}, 500);
-                $('#gap').animate({height: '90px'}, 800);
-
-            }
-        }
-    });
-
+    /* Animation for header
+     var sticky = $(".sticky");
+     
+     
+     $(function () {
+     $('.sticky').data('size', 'big');
+     });
+     
+     $(window).scroll(function () {
+     var $nav = $('.sticky');
+     if ($('body').scrollTop() > 0) {
+     if ($nav.data('size') == 'big') {
+     $('#gap').animate({height: '0px'}, 800);
+     $nav.data('size', 'small').stop().animate({
+     height: '52px'
+     }, 600);
+     $('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
+     $('#logo').animate({marginTop: "9px", marginBottom: "11px", width: "130px", height: "40px"}, 500);
+     }
+     } else {
+     if ($nav.data('size') == 'small') {
+     $nav.data('size', 'big').stop().animate({
+     height: '90px'
+     }, 600);
+     $('nav').animate({marginTop: "25px", marginBottom: "0px"}, 500);
+     $('#logo').animate({marginTop: "20px", marginBottom: "11px", width: "191px", height: "59px"}, 500);
+     $('#gap').animate({height: '90px'}, 800);
+     
+     }
+     }
+     });
+     */
 
 
     /*Redirection menu*/

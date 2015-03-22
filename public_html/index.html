@@ -14,13 +14,14 @@ and open the template in the editor.
     </head>
     <body>
         <header class="bg-black sticky">
-            <div class="row col-center">
+
+            <div class="row col-center" style="  width: 75%;height: 100%;">
                 <div id="wrapper">
                     <div id="logo" class="col-xs-6">
                         <img src="img/logo/Logo-Getra-Prestige.png" alt="logo getra">
                     </div>
                     <nav class="xol-xs-6">
-                        <ul id="menu">
+                        <ul id="menu" class="hidden-sm hidden-xs">
                             <li><a href="#home">Home</a><div style="margin-top: 5px;
                                                              width: 52px;" class="traitLight menu"></div></li>
                             <li><a href="#team">The team</a><div style="margin-top: 5px;
@@ -30,6 +31,24 @@ and open the template in the editor.
                             <li><a href="#contact">Contact us</a><div style="margin-top: 5px;
                                                                       width: 92px;" class="traitLight menu"></div></li>
                         </ul>
+                        <div id="menu2" class="dropdown visible-sm visible-xs">
+                            <button class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                <svg class="shadow" version="1.1" id="Calque_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="82px" height="63px" viewBox="0 0 82 63" enable-background="new 0 0 82 63" xml:space="preserve">
+                                    <g>
+                                        <rect x="23.502" y="20.532" width="34.996" height="3.936"/>
+                                        <rect x="23.502" y="29.532" width="34.996" height="3.936"/>
+                                        <rect x="23.502" y="38.532" width="34.996" height="3.936"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#home">Home</a></li>
+                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#team">The team</a></li>
+                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#do">What we do</a></li>
+                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#contact">Contact us</a></li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -53,7 +72,7 @@ and open the template in the editor.
                 <div class="item bg bg2">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>GETRA PRESTIGE PROVIDES YOU <span class="orange">HOUSE KEEPING</span></h1>                                                    
+                            <h1>GETRA PRESTIGE PROVIDES YOU <br/><span class="orange">HOUSE KEEPING</span></h1>                                                    
                         </div>
                     </div>
                 </div>
