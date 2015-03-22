@@ -137,7 +137,7 @@ $(function () {
                     height: '52px'
                 }, 600);
                 $('nav').animate({marginTop: "10px", marginBottom: "10px"}, 500);
-                $('#logo').animate({marginTop: "9px", marginBottom: "11px", width: "161px", height: "54px"}, 500);
+                $('#logo').animate({marginTop: "9px", marginBottom: "11px", width: "130px", height: "40px"}, 500);
             }
         } else {
             if ($nav.data('size') == 'small') {
