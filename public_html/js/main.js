@@ -111,11 +111,10 @@ $(function () {
     $("#menu1").click(function () {
         $("#menu1").toggleClass("active");
     });
-    $("#menu1").blur(function () {
-        $("#menu1").removeClass("active");
-    });
-   
 
+    /*
+     * Behavior menu minimisé
+     */
     $("ul.dropdown-menu li a").click(function () {
         $(this).parent().toggleClass("active");
     });
@@ -123,10 +122,14 @@ $(function () {
         $(this).parent().removeClass("active");
     });
 
+    $('html').on('hidden.bs.dropdown', function () {
+        $("#menu1").removeClass("active");
+    });
+    
+
     /*Display text*/
 
     $('.service').click(function () {
-
         var p = $(this).children("p");
         var div = $(this).children("div");
         $(p).toggleClass("focused", p.is(":focus"));
