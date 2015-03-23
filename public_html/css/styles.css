@@ -110,8 +110,8 @@ header #wrapper #logo {
 }
 @media only screen and (max-width: 767px) {
   header #wrapper #logo {
-    width: 130px;
-    height: 40px;
+    width: 147px;
+    height: 45px;
     margin: 32px 0px 11px 0px;
   }
 }
@@ -258,62 +258,115 @@ body {
   height: 90px;
   visibility: hidden;
 }
-.carousel,
-.item,
-.active {
-  height: 100%;
+@media only screen and (max-width: 767px) {
+  .carousel-inner {
+    overflow: visible;
+  }
 }
-.carousel .item {
-  background-color: #777;
+@media only screen and (max-width: 767px) {
+  .carousel {
+    height: 400px;
+  }
 }
-.carousel-inner {
-  height: 100%;
+@media only screen and (max-width: 600px) {
+  .carousel {
+    height: 350px;
+  }
 }
-.carousel-caption {
-  position: absolute;
-  left: 13%;
-  top: 190px;
-  width: 500px;
-  z-index: 10;
-  float: left;
+@media only screen and (max-width: 450px) {
+  .carousel {
+    height: 300px;
+  }
 }
-.carousel-indicators {
-  position: absolute;
-  top: 370px;
-  left: 13.5%;
-  z-index: 15;
-  width: 107px;
-  padding-left: 0;
-  list-style: none;
-  float: left;
+@media only screen and (min-width: 1700px) {
+  .carousel-caption {
+    bottom: 286px !important;
+    left: 15%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carousel-caption {
+    bottom: 195px;
+    left: 15%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .carousel-caption {
+    bottom: 145px;
+    left: 15%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel-caption {
+    bottom: 90px;
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .carousel-caption {
+    width: 345px;
+    position: relative;
+    bottom: -15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-caption h1 {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 29.5px;
+    color: #363636;
+    text-align: center;
+    text-shadow: 0px 0px #000000;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .carousel-indicators {
+    bottom: 245px !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carousel-indicators {
+    bottom: 150px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .carousel-indicators {
+    bottom: 100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel-indicators {
+    bottom: 45px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .carousel-indicators {
+    left: 44%;
+    bottom: -25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel-indicators {
+    left: 43%;
+    bottom: -10px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .carousel-indicators {
+    left: 40%;
+    bottom: -5%;
+  }
 }
 .carousel-indicators li {
-  display: inline-block;
   width: 25px;
   height: 4px;
-  margin-right: 8px;
-  border: none;
+  border: none !important;
   background-color: #666565;
   text-indent: -999px;
   cursor: pointer;
 }
 .carousel-indicators .active {
   background-color: #ef7920;
-}
-.carousel .carousel-inner .bg {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  -webkit-background-size: cover;
-}
-.carousel .carousel-inner .bg1 {
-  background-image: url(../img/Web/Slider/Slider_1920x544_Gardening.jpg);
-}
-.carousel .carousel-inner .bg2 {
-  background-image: url(../img/Web/Slider/Slider_1920x544_Laundry.jpg);
-}
-.carousel .carousel-inner .bg3 {
-  background-image: url(../img/Web/Slider/Slider_1920x544_Welcomhome.jpg);
 }
 #home {
   padding-bottom: 30px;
@@ -611,8 +664,8 @@ Partie contact us
   }
   #contact #formulaire article {
     text-align: center;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   #contact #formulaire input,
   #contact #formulaire textarea {

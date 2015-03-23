@@ -80,7 +80,6 @@ $(function () {
 
     /*On over transistion for header*/
 
-
     $('#menu li a').mouseover(function () {
         $(this).next().animate({borderBottomColor: "#ef7920"}, '800');
     });
@@ -95,6 +94,7 @@ $(function () {
      });
      */
 
+    $('.carousel').carousel();
 
     /*Active state for services*/
 
@@ -125,7 +125,7 @@ $(function () {
     $('html').on('hidden.bs.dropdown', function () {
         $("#menu1").removeClass("active");
     });
-    
+
 
     /*Display text*/
 
