@@ -96,7 +96,7 @@ header {
   box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 header #wrapper {
-  width: 100%;
+  width: 74%;
   height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -321,16 +321,18 @@ body {
 #home div.traitHBlack {
   margin-bottom: 30px;
 }
-@media only screen and (min-width: 1700px) {
-  #home div.traitHBlack + div {
-    width: 1380px !important;
-    text-align: center;
-    margin: 0 auto;
-  }
+#home div.traitHBlack + div {
+  /*
+        @media @large-desktop{
+            width: 1380px !important;
+            text-align: center;
+            margin:0 auto;
+        }
+        */
 }
 @media only screen and (min-width: 992px) {
   #home div.traitHBlack + div {
-    width: 990px;
+    width: 76%;
     text-align: center;
     margin: 0 auto;
   }
@@ -354,17 +356,19 @@ body {
   }
 }
 #team {
+  /*
+    div.container{
+        @media @large-desktop{
+            width:1815px;
+        }
+    }
+    */
   padding-bottom: 30px;
   margin-left: 0px;
   background-color: #f8f8f8;
   -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
-}
-@media only screen and (min-width: 1700px) {
-  #team div.container {
-    width: 1815px;
-  }
 }
 #team div.traitHBlack {
   margin-bottom: 35px;
@@ -422,12 +426,14 @@ Partie what we do
 
 */
 #do {
+  /*
+    div.container{
+        @media @large-desktop{
+            width:1815px;
+        }
+    }
+    */
   padding-bottom: 50px;
-}
-@media only screen and (min-width: 1700px) {
-  #do div.container {
-    width: 1815px;
-  }
 }
 #do div.traitHBlack + p {
   margin-top: 35px;
@@ -528,33 +534,39 @@ Partie contact us
   }
 }
 #contact #formulaire {
+  /*
+        .container{
+            @media @large-desktop{
+                width:1815px;
+            }
+        }
+        
+        */
   padding-bottom: 50px;
   padding-top: 45px;
-}
-@media only screen and (min-width: 1700px) {
-  #contact #formulaire .container {
-    width: 1815px;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  #contact #formulaire aside {
-    position: relative;
-    left: 96px;
-    padding-left: 0px !important;
-  }
-  #contact #formulaire article {
-    position: relative;
-    right: 50px;
-  }
-  #contact #formulaire article input {
-    width: 395px;
-  }
-  #contact #formulaire article textarea {
-    width: 817px;
-  }
-  #contact #formulaire article input[type=submit] {
-    right: 422px !important;
-  }
+  /*
+        @media @large-desktop{
+            aside{
+                position: relative;
+                left: 96px;
+                padding-left:0px !important;
+            }       
+            article{
+                position: relative;
+                right: 50px;
+
+                input{
+                    width: 395px;
+                }
+                textarea{
+                    width: 817px;
+                }
+                input[type=submit]{
+                    right:422px !important;
+                }
+            }
+        }
+        */
 }
 @media only screen and (min-width: 992px) {
   #contact #formulaire aside {
