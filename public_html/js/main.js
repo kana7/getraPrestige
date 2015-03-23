@@ -87,13 +87,6 @@ $(function () {
         $(this).next().animate({borderBottomColor: "#c9c9c9"}, '800');
     });
 
-    /*
-     $('#menu li a').click(function () {
-     $(this).toggleClass("active");
-     $("#menu li a").not(this).removeClass("active");
-     });
-     */
-
     $('.carousel').carousel();
 
     /*Active state for services*/
@@ -129,15 +122,28 @@ $(function () {
 
     /*Display text*/
 
+    function viewport() {
+        var e = window, a = 'inner';
+        if (!('innerWidth' in window)) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        return {width: e[ a + 'Width' ], height: e[ a + 'Height' ]};
+    }
+
+    var services = $('.service');
+    var content = $('div.contenu');
+
     $('.service').click(function () {
+        if($(content).children().length > 0 ){
+            
+        }
         var p = $(this).children("p");
         var div = $(this).children("div");
-        $(p).toggleClass("focused", p.is(":focus"));
-        $(div).toggleClass("focused", div.is(":focus"));
         $(this).after("<p class=\"col-xs-12 text-center\">Ceci est un test</p>");
     });
 
-    var height = $('header').height();
+
     /* Animation for header
      var sticky = $(".sticky");
      
@@ -171,7 +177,9 @@ $(function () {
      });
      */
 
-
+     
+      var height = $('header').height();
+      
     /*Redirection menu*/
     $('a[href*=#]:not([href=#])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')

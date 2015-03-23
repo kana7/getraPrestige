@@ -10,14 +10,14 @@ and open the template in the editor.
 */
 /* Gobal variiables*/
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
     Created on : 13 mars 2015, 22:04:33
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -39,14 +39,14 @@ and open the template in the editor.
     Author     : lol2
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
     Created on : 14 mars 2015, 11:21:53
 */
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -67,7 +67,7 @@ Auteur: Quentin Fonck
   -webkit-filter: grayscale(0);
 }
 /*
-Ce fichier est la propriÃ©tÃ© de Getra Luxembourg.
+Ce fichier est la propriété de Getra Luxembourg.
 Auteur: Quentin Fonck
 */
 /* 
@@ -322,16 +322,19 @@ body {
 @media only screen and (min-width: 1700px) {
   .carousel-indicators {
     bottom: 245px !important;
+    left: 15%;
   }
 }
 @media only screen and (min-width: 992px) {
   .carousel-indicators {
     bottom: 150px;
+    left: 15%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .carousel-indicators {
     bottom: 100px;
+    left: 15%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -560,27 +563,27 @@ Partie contact us
   margin-top: 35px;
   margin-bottom: 45px;
 }
-#contact div.row #coordonnÃ©e p {
+#contact div.row #coordonnée p {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
   text-shadow: 0px 2px #000000;
 }
-#contact div.row #coordonnÃ©e #data {
+#contact div.row #coordonnée #data {
   line-height: 185%;
 }
-#contact div.row #coordonnÃ©e img {
+#contact div.row #coordonnée img {
   margin-top: 15px;
   width: 242px;
   height: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  #contact div.row #coordonnÃ©e div[class^="col-"] {
+  #contact div.row #coordonnée div[class^="col-"] {
     width: 265px;
     display: inline-block;
   }
-  #contact div.row #coordonnÃ©e div.row #blocInfos {
+  #contact div.row #coordonnée div.row #blocInfos {
     width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -703,7 +706,7 @@ Partie contact us
   }
 }
 /*
-BanniÃ¨re de pied de page
+Bannière de pied de page
 
 */
 @media only screen and (max-width: 767px) {
