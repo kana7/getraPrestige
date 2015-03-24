@@ -1,0 +1,27 @@
+«MAIL SERVER mail.internet.lu»
+
+«MAIL TO mkremer@internet.lu»
+
+«MAIL FROM prestige@getra.lu»
+«MAIL SUBJECT GETRA PRESTIGE Contact»
+«OUTPUT MAIL»
+
+GETRA PRESTIGE CONTACT FORM
+
+Nom :«last»
+Prénom :«first»
+Téléphone :«phone»
+E-mail :«mail»
+Commentaire :«text»
+
+
+
+«/OUTPUT»
+«MAIL SEND»
+
+«IF #SQLSTATUS#==0»
+	Votre message n'a pas été envoyé.
+	<a style="color:red" href="javascript:history.back()">Veuillez réessayer plus tard.</a>
+«ELSE»
+	<meta HTTP-EQUIV="REFRESH" content="0; url=http://www.getra.lu/prestige123/">
+«ENDIF»

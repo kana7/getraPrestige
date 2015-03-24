@@ -230,7 +230,6 @@ html, body {
             text-align: center;
             text-shadow: 0px 0px #000000;
         }
-
     }
 }
 
@@ -286,14 +285,6 @@ html, body {
 
     div.traitHBlack+div{
 
-        /*
-        @media @large-desktop{
-            width: 1380px !important;
-            text-align: center;
-            margin:0 auto;
-        }
-        */
-
         @media @desktop{
             width: 76%;
             text-align: center;
@@ -313,13 +304,6 @@ html, body {
 }
 
 #team{
-    /*
-    div.container{
-        @media @large-desktop{
-            width:1815px;
-        }
-    }
-    */
     padding-bottom: 30px;
     margin-left: 0px;
     background-color: @color-bg;
@@ -376,14 +360,6 @@ Partie what we do
 
 */
 #do{
-    /*
-    div.container{
-        @media @large-desktop{
-            width:1815px;
-        }
-    }
-    */
-
     padding-bottom: 50px;
     div.traitHBlack+p{
         margin-top: 35px;
@@ -428,7 +404,16 @@ Partie what we do
             .transition(all 0.7s ease);
         }
     }
+}
 
+.contenu{
+    width: 90%; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+    .text-justCentered;
 }
 
 
@@ -733,6 +718,9 @@ h2{
 }
 p{
     .light(@paragraph-size, @color-caract-black);
+    &.ser{
+        .light(11pt, @color-caract-black);
+    }
 }
 
 .titreService{
@@ -810,6 +798,13 @@ div.traitLight{
     height: 2px;
     float: none;
     margin-top: 50px;
+    &.orange{
+        clear: both;
+        width:100%;
+        margin-top: 0px;
+        margin-bottom: 18px;
+        border-bottom: @orange solid 1px;
+    }
 }
 
 .menu{
@@ -877,6 +872,7 @@ Alignement
 
     @media @desktop{
         margin-top: 35px;
+        height: 295px;
     }
 
     @media @tablet{
@@ -886,6 +882,7 @@ Alignement
 
     @media @phone{
         margin-top: 35px;
+        height: 325px;
     }
 }
 
