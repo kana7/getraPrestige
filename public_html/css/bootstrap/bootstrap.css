@@ -6176,11 +6176,12 @@ button.close {
   bottom: 10px;
   left: 15%;
   z-index: 15;
-  width: 30%;
-  padding-left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+  width: 89px;
+  padding: 0;
+  margin: 0 auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  text-align: center;
   list-style: none;
 }
 .carousel-indicators li {
