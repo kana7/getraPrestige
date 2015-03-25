@@ -1,9 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Getra prestige</title>
@@ -11,9 +6,15 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
         <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
-        <header class="bg-black sticky">
+        <header style="z-index: 900;" class="bg-black sticky">
 
             <div class="row col-center">
                 <div id="wrapper">
@@ -43,10 +44,10 @@ and open the template in the editor.
                                 </svg>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#home">Home</a></li>
-                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#team">The team</a></li>
-                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#do">What we do</a></li>
-                                <li class="bg-black" role="presentation"><a role="menuitem" tabindex="-1" href="#contact">Contact us</a></li>
+                                <li class="bg-black"><a href="#home">Home</a></li>
+                                <li class="bg-black"><a href="#team">The team</a></li>
+                                <li class="bg-black"><a href="#do">What we do</a></li>
+                                <li class="bg-black"><a href="#contact">Contact us</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -207,11 +208,11 @@ and open the template in the editor.
                     <div class="col-md-4 col-sm-6 col-xs-12 hight">
                         <div id="modern" class="row service">
                             <div style="background: url(img/Web/Services/modernisation_refurbishment.jpg) no-repeat; background-position: 10% 0%" class="col-xs-12 circular col-center grey"></div>
-                            <p class="col-xs-12 text-center">MODERNISATION &<br/>REFURBISHMENT</p>
+                            <p class="col-xs-12 text-center">MODERNISATION & REFURBISHMENT</p>
                         </div>
                     </div>
 
-                    <div  class="contenu phone"></div>
+                    <div class="contenu phone"></div>
 
                     <div class="col-md-4 col-sm-6 col-xs-12 hight">
                         <div id="design" class="row service">
@@ -231,7 +232,7 @@ and open the template in the editor.
 
                     <div  class="contenu phone desktop"></div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12 hight">
+                    <div id="mailforward" class="col-md-4 col-sm-6 col-xs-12 hight">
                         <div id="mail" class="row service">
                             <div style="background: url(img/Web/Services/mailforward.jpg) no-repeat; background-position: 45% 0%" class="col-xs-12 circular col-center"></div>
                             <p class="col-xs-12 text-center">MAILFORWARD</p>
@@ -262,7 +263,7 @@ and open the template in the editor.
             <div id="formulaire" class="row bg-black">
                 <div class="container">
                     <article class="col-md-7 col-sm-12 text-right">
-                        <form method="GET" enctype="text/plain" action="/Scripts/sql.exe" onsubmit="alert('Thank you for completing this form. \n We will contact you as soon as possible.');
+                        <form method="GET" enctype="text/plain" action="/Scripts/sql.exe" autocomplete="off" onsubmit="alert('Thank you for completing this form. \n We will contact you as soon as possible.');
                                 document.location.href = 'http://www.getra.lu/prestige123/';">
 
                             <input type="hidden" name="Sql" value="getra.uhs"/>
@@ -292,7 +293,7 @@ and open the template in the editor.
                                     <p><strong>Getra <span class="orange">prestige</span></strong><br/>
                                         14,avenue du X Septembre<br/>
                                         L-2550 LUXEMBOURG</p>
-                                    <p id="data">Phone: +352 27 99 00 10 - 350<br/>
+                                    <p id="data">Phone: +352 27 99 00 10<br/>
                                         Fax: +352 27 99 42 41<br/>
                                         www.getra.lu/prestige</p>
                                 </div>

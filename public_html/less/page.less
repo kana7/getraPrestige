@@ -10,6 +10,15 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+
+    header #wrapper nav #menu li {
+        font-weight: 500 !important;
+    }
+}
+
+
 .container-fluid{
     padding-right: 0px; 
     padding-left: 0px; 
@@ -184,7 +193,7 @@ html, body {
 
 @media @phone{
     .carousel-inner{
-        overflow: visible;
+        overflow: hidden;
     }
 }
 
@@ -256,11 +265,11 @@ html, body {
         bottom: -25px;
     }
     @media only screen and (max-width: 600px){
-        left: 43%;
+        left: 42%;
         bottom: -10px;
     }
     @media only screen and (max-width: 450px){
-        left: 40%;
+        left: 38%;
         bottom: -5%;
     }
 }
@@ -277,7 +286,7 @@ html, body {
 }
 
 #home{
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 
     div.traitHBlack{
         margin-bottom: 30px;
@@ -319,7 +328,8 @@ html, body {
     }
 
     div.container{
-        margin-top: 50px;
+        margin-top: 8px;
+        margin-bottom: 35px;
     }
 
     div.traitLight+p{
@@ -360,10 +370,10 @@ Partie what we do
 
 */
 #do{
-    padding-bottom: 50px;
+    padding-bottom: 22px;
     div.traitHBlack+p{
         margin-top: 35px;
-        margin-bottom: 45px;
+        margin-bottom: 7px;
     }
 
     div[class^="col-"] p{
@@ -406,6 +416,21 @@ Partie what we do
     }
 }
 
+#mailforward{
+    position: relative;
+    /*@media @large-desktop{
+        left: 374px !important;    
+    }*/
+    @media only screen and (min-width: 1200px){
+        left: 378px !important;
+    }
+
+    @media @desktop{
+        left: 312px;    
+    }
+
+}
+
 .contenu{
     width: 90%; 
     margin-top: 20px;
@@ -430,7 +455,7 @@ Partie contact us
     div.row{
         div.traitH+p{
             margin-top: 35px;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
 
         #coordonnée{
@@ -470,40 +495,11 @@ Partie contact us
     
     */
     #formulaire{
-        /*
-        .container{
-            @media @large-desktop{
-                width:1815px;
-            }
-        }
-        
-        */
+
 
         padding-bottom: 50px;
         padding-top: 45px;
-        /*
-        @media @large-desktop{
-            aside{
-                position: relative;
-                left: 96px;
-                padding-left:0px !important;
-            }       
-            article{
-                position: relative;
-                right: 50px;
 
-                input{
-                    width: 395px;
-                }
-                textarea{
-                    width: 817px;
-                }
-                input[type=submit]{
-                    right:422px !important;
-                }
-            }
-        }
-        */
 
         @media @desktop{
             aside{
@@ -714,12 +710,13 @@ h2{
     .regular(@titreCategorie-size, @color-caract-black);
     text-transform: capitalize;
     margin-top: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 p{
     .light(@paragraph-size, @color-caract-black);
     &.ser{
         .light(11pt, @color-caract-black);
+        line-height: 25px;
     }
 }
 
@@ -802,8 +799,11 @@ div.traitLight{
         clear: both;
         width:100%;
         margin-top: 0px;
-        margin-bottom: 18px;
+        margin-bottom: 14px;
         border-bottom: @orange solid 1px;
+        &.mini{
+            // width:75%;
+        }
     }
 }
 
@@ -876,13 +876,13 @@ Alignement
     }
 
     @media @tablet{
-        margin-top: 15px;
-        height: 325px;
+        margin-top: 35px;
+        height: 295px;
     }
 
     @media @phone{
         margin-top: 35px;
-        height: 325px;
+        height: 295px;
     }
 }
 

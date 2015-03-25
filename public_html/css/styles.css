@@ -77,6 +77,11 @@ Auteur: Quentin Fonck
 Partie de la page
 
 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  header #wrapper nav #menu li {
+    font-weight: 500 !important;
+  }
+}
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
@@ -260,7 +265,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .carousel-inner {
-    overflow: visible;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -350,13 +355,13 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .carousel-indicators {
-    left: 43%;
+    left: 42%;
     bottom: -10px;
   }
 }
 @media only screen and (max-width: 450px) {
   .carousel-indicators {
-    left: 40%;
+    left: 38%;
     bottom: -5%;
   }
 }
@@ -372,7 +377,7 @@ body {
   background-color: #ef7920;
 }
 #home {
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 }
 #home div.traitHBlack {
   margin-bottom: 30px;
@@ -421,7 +426,8 @@ body {
   margin-top: 20px;
 }
 #team div.container {
-  margin-top: 50px;
+  margin-top: 8px;
+  margin-bottom: 35px;
 }
 #team div.traitLight + p {
   margin-top: 5px;
@@ -466,11 +472,11 @@ Partie what we do
 
 */
 #do {
-  padding-bottom: 50px;
+  padding-bottom: 22px;
 }
 #do div.traitHBlack + p {
   margin-top: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 7px;
 }
 #do div[class^="col-"] p {
   font-family: "Open Sans";
@@ -522,6 +528,22 @@ Partie what we do
   -ms-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
 }
+#mailforward {
+  position: relative;
+  /*@media @large-desktop{
+        left: 374px !important;    
+    }*/
+}
+@media only screen and (min-width: 1200px) {
+  #mailforward {
+    left: 378px !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #mailforward {
+    left: 312px;
+  }
+}
 .contenu {
   width: 90%;
   margin-top: 20px;
@@ -550,7 +572,7 @@ Partie contact us
 }
 #contact div.row div.traitH + p {
   margin-top: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 #contact div.row #coordonnée p {
   font-family: "Open Sans";
@@ -579,39 +601,8 @@ Partie contact us
   }
 }
 #contact #formulaire {
-  /*
-        .container{
-            @media @large-desktop{
-                width:1815px;
-            }
-        }
-        
-        */
   padding-bottom: 50px;
   padding-top: 45px;
-  /*
-        @media @large-desktop{
-            aside{
-                position: relative;
-                left: 96px;
-                padding-left:0px !important;
-            }       
-            article{
-                position: relative;
-                right: 50px;
-
-                input{
-                    width: 395px;
-                }
-                textarea{
-                    width: 817px;
-                }
-                input[type=submit]{
-                    right:422px !important;
-                }
-            }
-        }
-        */
 }
 @media only screen and (min-width: 992px) {
   #contact #formulaire aside {
@@ -803,7 +794,7 @@ h2 {
   color: #363636;
   text-transform: capitalize;
   margin-top: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 p {
   font-family: "Open Sans";
@@ -816,6 +807,7 @@ p.ser {
   font-weight: 300;
   font-size: 11pt;
   color: #363636;
+  line-height: 25px;
 }
 .titreService {
   font-family: "Open Sans";
@@ -911,7 +903,7 @@ div.traitLight.orange {
   clear: both;
   width: 100%;
   margin-top: 0px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   border-bottom: #ef7920 solid 1px;
 }
 .menu {
@@ -1006,14 +998,14 @@ Alignement
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .hight {
-    margin-top: 15px;
-    height: 325px;
+    margin-top: 35px;
+    height: 295px;
   }
 }
 @media only screen and (max-width: 767px) {
   .hight {
     margin-top: 35px;
-    height: 325px;
+    height: 295px;
   }
 }
 input.input-space,
