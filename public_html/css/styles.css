@@ -433,66 +433,7 @@ body {
     -moz-text-align-last: center;
   }
 }
-#team {
-  padding-bottom: 30px;
-  margin-left: 0px;
-  background-color: #f8f8f8;
-  -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
-}
-#team div.traitHBlack {
-  margin-bottom: 35px;
-}
-#team div[class^="col-"] p {
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 16px;
-  color: #ef7920;
-  margin-top: 20px;
-}
-#team div.container {
-  margin-top: 8px;
-  margin-bottom: 35px;
-}
-#team div.traitLight + p {
-  margin-top: 5px;
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 16px;
-  color: #363636;
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  #team div[class^="col-"]:last-child {
-    position: relative;
-    left: 188px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #team div.traitHBlack + p {
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  #team div.traitHBlack + p {
-    width: 670px;
-    text-align: justify;
-    margin: 0 auto;
-    text-align-last: center;
-    -moz-text-align-last: center;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #team div.traitHBlack + p {
-    width: 80%;
-    text-align: justify;
-    margin: 0 auto;
-    text-align-last: center;
-    -moz-text-align-last: center;
-  }
-}
+
 /*
 Partie what we do
 
