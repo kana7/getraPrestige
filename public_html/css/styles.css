@@ -93,7 +93,7 @@ Partie de la page
 header {
   position: fixed;
   width: 100%;
-  height: 90px;
+  height: 65px;
   z-index: 100;
   top: 0px;
   -webkit-box-shadow: 0px 2px 15px 0 rgba(0, 0, 0, 0.5);
@@ -108,16 +108,16 @@ header #wrapper {
 }
 header #wrapper #logo {
   float: left;
-  margin: 20px 0px 11px 0px;
+  margin: 14px 0px 11px 0px;
   z-index: 112;
-  width: 191px;
-  height: 59px;
+  width: 150px;
+  height: auto;
 }
 @media only screen and (max-width: 767px) {
   header #wrapper #logo {
     width: 147px;
     height: 45px;
-    margin: 32px 0px 11px 0px;
+    margin: 15px 0px 11px 0px;
   }
 }
 header #wrapper #logo img {
@@ -125,7 +125,7 @@ header #wrapper #logo img {
   height: 100%;
 }
 header #wrapper nav {
-  margin: 25px 0px 0px 0px;
+  margin: 18px 0px 0px 0px;
   float: right;
   width: auto;
 }
@@ -142,7 +142,7 @@ header #wrapper nav #menu li {
   display: block;
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   color: #ffffff;
   text-shadow: 0px 2px #000000;
 }
@@ -186,7 +186,7 @@ header #wrapper nav #menu2 button.active svg {
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 77%;
   left: 0;
   z-index: 10;
   display: none;
@@ -272,7 +272,7 @@ body {
 }
 #gap {
   display: block;
-  height: 90px;
+  height: 65px;
   visibility: hidden;
 }
 @media only screen and (max-width: 767px) {
@@ -433,18 +433,76 @@ body {
     -moz-text-align-last: center;
   }
 }
-
+#team {
+  padding-bottom: 30px;
+  margin-left: 0px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+}
+#team div.traitHBlack {
+  margin-bottom: 35px;
+}
+#team div[class^="col-"] p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ef7920;
+  margin-top: 20px;
+}
+#team div.container {
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
+#team div.traitLight + p {
+  margin-top: 5px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #363636;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #team div[class^="col-"]:last-child {
+    position: relative;
+    left: 188px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #team div.traitHBlack + p {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #team div.traitHBlack + p {
+    width: 670px;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #team div.traitHBlack + p {
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+    text-align-last: center;
+    -moz-text-align-last: center;
+  }
+}
 /*
 Partie what we do
 
 */
 #do {
-  padding-bottom: 22px;
-  background-color: #f8f8f8;
+  background-color: #F8F8F8;
   -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
-  
+  padding-bottom: 22px;
 }
 #do div.traitHBlack + p {
   margin-top: 35px;

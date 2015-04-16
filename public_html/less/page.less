@@ -32,7 +32,7 @@ Partie de la page
 header{
     position:fixed;
     width: 100%;
-    height: 90px;
+    height: 65px;
     z-index: 100;
     top: 0px;
     .drop-shadow(0px, 2px, 15px, 0, 0.5);
@@ -43,17 +43,16 @@ header{
         margin: 0 auto;
         padding: 0;
 
-
         #logo{
             float: left;
-            margin: 20px 0px 11px 0px;
+            margin: 14px 0px 11px 0px;
             z-index:112;
-            width: 191px;
-            height:59px;
+            width: 150px;
+            height:auto;
             @media @phone{
                 width: 147px;
                 height: 45px;
-                margin: 32px 0px 11px 0px;
+                margin: 15px 0px 11px 0px;
             }
             img{
                 width: 100%;
@@ -63,7 +62,7 @@ header{
         }
 
         nav{
-            margin: 25px 0px 0px 0px;
+            margin: 18px 0px 0px 0px;
             float: right;
             width: auto;
 
@@ -79,7 +78,7 @@ header{
                     text-align: center;
                     display: block;
 
-                    .semiBold(@menu-size, @white);
+                    .semiBold(15px, @white);
                     text-shadow: 0px 2px #000000; 
                     a{
                         text-decoration: none;
@@ -123,7 +122,7 @@ header{
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
+    top: 77%;
     left: 0;
     z-index: 10;
     display: none;
@@ -199,7 +198,7 @@ html, body {
 
 #gap{
     display: block;
-    height: 90px;
+    height: 65px;
     visibility: hidden;
 }
 
@@ -391,6 +390,10 @@ Partie what we do
 
 */
 #do{
+    background-color: #F8F8F8;
+    -webkit-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 1px 15px 0 rgba(0, 0, 0, 0.3);
     padding-bottom: 22px;
     div.traitHBlack+p{
         margin-top: 35px;
