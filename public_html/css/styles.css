@@ -158,7 +158,7 @@ header #wrapper nav #menu2 {
 }
 header #wrapper nav #menu2 button {
   position: relative;
-  bottom: 13px;
+  bottom: 18px;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -186,7 +186,7 @@ header #wrapper nav #menu2 button.active svg {
 }
 .dropdown-menu {
   position: absolute;
-  top: 77%;
+  top: 70%;
   left: 0;
   z-index: 10;
   display: none;
